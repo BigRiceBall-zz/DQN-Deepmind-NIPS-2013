@@ -1,0 +1,106 @@
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.Message.\+Message Class Reference}
+\label{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Message.\+Message@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Message.\+Message}}
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message}{Message} class overrides the threading.\+Event class to provide a simple way of communication between threads.  
+
+
+Inheritance diagram for D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.Message.\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a2fdcb857df94a7edc9b6e36ef0a8e1c6}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message}{Message} class constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a7f12ede11926bee5d5b3946375f28156}{read} (self)
+\begin{DoxyCompactList}\small\item\em The read method reads the current message and reset the threading.\+Event internal flag. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a53cf5ac601122f2ace3178abee8f81db}{write} (self, message, data)
+\begin{DoxyCompactList}\small\item\em The write method writes a message and set the threading.\+Event internal flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a87173863ddcb622f03cefa6dcf9cda53}{Q\+U\+IT} = 0
+\begin{DoxyCompactList}\small\item\em Default message type sent to aks the listenner to terminate. \end{DoxyCompactList}\item 
+int \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a440cc65343a167377dae7c508e571c79}{T\+R\+A\+IN} = 1
+\begin{DoxyCompactList}\small\item\em Default message type sent to ask the listenner to start trainind. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message}{Message} class overrides the threading.\+Event class to provide a simple way of communication between threads. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a2fdcb857df94a7edc9b6e36ef0a8e1c6}{}\label{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a2fdcb857df94a7edc9b6e36ef0a8e1c6} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Message.\+Message.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message}{Message} class constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a7f12ede11926bee5d5b3946375f28156}{}\label{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a7f12ede11926bee5d5b3946375f28156} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message}!read@{read}}
+\index{read@{read}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Message.\+Message.\+read (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The read method reads the current message and reset the threading.\+Event internal flag. 
+
+\begin{DoxyReturn}{Returns}
+The registered message 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a53cf5ac601122f2ace3178abee8f81db}{}\label{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a53cf5ac601122f2ace3178abee8f81db} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message}!write@{write}}
+\index{write@{write}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Message.\+Message.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{message,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+The write method writes a message and set the threading.\+Event internal flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \+: The message to send. \\
+\hline
+{\em data} & \+: Any additional datas associated to the message. This is not used for now \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a87173863ddcb622f03cefa6dcf9cda53}{}\label{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a87173863ddcb622f03cefa6dcf9cda53} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message}!Q\+U\+IT@{Q\+U\+IT}}
+\index{Q\+U\+IT@{Q\+U\+IT}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message}}
+\subsubsection{\texorpdfstring{Q\+U\+IT}{QUIT}}
+{\footnotesize\ttfamily int D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Message.\+Message.\+Q\+U\+IT = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default message type sent to aks the listenner to terminate. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a440cc65343a167377dae7c508e571c79}{}\label{classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message_a440cc65343a167377dae7c508e571c79} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message}!T\+R\+A\+IN@{T\+R\+A\+IN}}
+\index{T\+R\+A\+IN@{T\+R\+A\+IN}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Message\+::\+Message}}
+\subsubsection{\texorpdfstring{T\+R\+A\+IN}{TRAIN}}
+{\footnotesize\ttfamily int D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Message.\+Message.\+T\+R\+A\+IN = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default message type sent to ask the listenner to start trainind. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Message_8py}{Message.\+py}\end{DoxyCompactItemize}

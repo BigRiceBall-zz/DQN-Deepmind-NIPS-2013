@@ -1,0 +1,99 @@
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.Qt\+Display.\+Display\+Handler Class Reference}
+\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Qt\+Display.\+Display\+Handler@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Qt\+Display.\+Display\+Handler}}
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler}{Display\+Handler} class implements a thread that will be responsible of managing any windows or other display or Qt events.  
+
+
+Inheritance diagram for D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.Qt\+Display.\+Display\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a417807e1b454c0cc3e86a8bddb2e6aee}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler}{Display\+Handler} constructor initialize the thread. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a1f995b71cfad970a33d358737a90970a}{run} (self)
+\begin{DoxyCompactList}\small\item\em The run method initilizes the Qt display and start the event loop. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a1c18d34e62cbeff7c6d75a8eeb02506b}{Qt} (self)
+\begin{DoxyCompactList}\small\item\em The Qt methods wait for the Qt display to be reday and returns it. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a9f10007a3cf4bfdf8b3908f57ef03b7b}{exit} (self)
+\begin{DoxyCompactList}\small\item\em The exit method force the \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}{Q\+Display} object to leave its event loop and wait for the current thread to terminate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a5c3b4122e47a768cd3ef67f478ee25c0}{qt\+\_\+ready}
+\begin{DoxyCompactList}\small\item\em An event that indicates all the signals are connected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler}{Display\+Handler} class implements a thread that will be responsible of managing any windows or other display or Qt events. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a417807e1b454c0cc3e86a8bddb2e6aee}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a417807e1b454c0cc3e86a8bddb2e6aee} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Display\+Handler.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler}{Display\+Handler} constructor initialize the thread. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a9f10007a3cf4bfdf8b3908f57ef03b7b}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a9f10007a3cf4bfdf8b3908f57ef03b7b} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler}!exit@{exit}}
+\index{exit@{exit}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler}}
+\subsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Display\+Handler.\+exit (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The exit method force the \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}{Q\+Display} object to leave its event loop and wait for the current thread to terminate. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a1c18d34e62cbeff7c6d75a8eeb02506b}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a1c18d34e62cbeff7c6d75a8eeb02506b} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler}!Qt@{Qt}}
+\index{Qt@{Qt}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler}}
+\subsubsection{\texorpdfstring{Qt()}{Qt()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Display\+Handler.\+Qt (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The Qt methods wait for the Qt display to be reday and returns it. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}{Q\+Display} object managed by this thread 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a1f995b71cfad970a33d358737a90970a}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a1f995b71cfad970a33d358737a90970a} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler}!run@{run}}
+\index{run@{run}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Display\+Handler.\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The run method initilizes the Qt display and start the event loop. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a5c3b4122e47a768cd3ef67f478ee25c0}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1DisplayHandler_a5c3b4122e47a768cd3ef67f478ee25c0} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler}!qt\+\_\+ready@{qt\+\_\+ready}}
+\index{qt\+\_\+ready@{qt\+\_\+ready}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Display\+Handler}}
+\subsubsection{\texorpdfstring{qt\+\_\+ready}{qt\_ready}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Display\+Handler.\+qt\+\_\+ready}
+
+
+
+An event that indicates all the signals are connected. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{QtDisplay_8py}{Qt\+Display.\+py}\end{DoxyCompactItemize}

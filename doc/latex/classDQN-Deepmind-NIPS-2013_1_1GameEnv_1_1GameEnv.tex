@@ -1,0 +1,175 @@
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.Game\+Env.\+Game\+Env Class Reference}
+\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Game\+Env.\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Game\+Env.\+Game\+Env}}
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv}{Game\+Env} class provides a way for the agent to interact with the game.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a787af9d0e467c038e970246ae4dfdc08}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, rom, \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_ae8e7e56bd996ea0ce4ece1ca32f6b54a}{out\+Size})
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv}{Game\+Env} constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a76014d9140e479757a52b9ceda06dd16}{min\+Actions} (self)
+\begin{DoxyCompactList}\small\item\em The min\+Actions method retuns an array containing the minimal action set for the loaded game. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_ab2efa70a8316abde73936602001654a6}{leg\+Actions} (self)
+\begin{DoxyCompactList}\small\item\em The leg\+Actions method returns an array containing the set of legal actions. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a37712548267b91afddb6866fddf22b94}{get\+Screen} (self)
+\begin{DoxyCompactList}\small\item\em The get\+Screen method converts the game screen to a grayscale array shrink it to the configured size and returns it. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a553c6eac3cac494bff5c9703dcfea2fe}{get\+Screen\+R\+GB} (self)
+\begin{DoxyCompactList}\small\item\em The get\+Screen\+R\+GB method returns an array containing the R\+BG screen. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a675bec246ea3ed4506328deb5df64d4e}{act} (self, action)
+\begin{DoxyCompactList}\small\item\em The act method performs the given action and returns the reward gained from that action. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_afc780b83378b9d19d9dba64711e5c2ed}{reset\+Game} (self)
+\begin{DoxyCompactList}\small\item\em The reset\+Game method reset the game. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a1ccc35e029e05910c3c25ffa602e442b}{game\+Over} (self)
+\begin{DoxyCompactList}\small\item\em The game\+Over methods return whether or not the game ended. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a2dedb2f4e5f0f1b7da2970ac89a5b544}{screen\+Size}
+\begin{DoxyCompactList}\small\item\em The size of the screen in the form \mbox{[}height, width\mbox{]}. \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_ae8e7e56bd996ea0ce4ece1ca32f6b54a}{out\+Size}
+\begin{DoxyCompactList}\small\item\em The size of the images returned by get\+Screen the form \mbox{[}height, width\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv}{Game\+Env} class provides a way for the agent to interact with the game. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a787af9d0e467c038e970246ae4dfdc08}{}\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a787af9d0e467c038e970246ae4dfdc08} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Game\+Env.\+Game\+Env.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{rom,  }\item[{}]{out\+Size }\end{DoxyParamCaption})}
+
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv}{Game\+Env} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rom} & \+: The path to the rom to load \\
+\hline
+{\em out\+Size} & \+: An array of two elements \mbox{[}h, w\mbox{]} where h is the height of the image to output with the method get\+Screen and w its width \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a675bec246ea3ed4506328deb5df64d4e}{}\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a675bec246ea3ed4506328deb5df64d4e} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}!act@{act}}
+\index{act@{act}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}}
+\subsubsection{\texorpdfstring{act()}{act()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Game\+Env.\+Game\+Env.\+act (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{action }\end{DoxyParamCaption})}
+
+
+
+The act method performs the given action and returns the reward gained from that action. 
+
+\begin{DoxyReturn}{Returns}
+The reward issued from the action taken 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a1ccc35e029e05910c3c25ffa602e442b}{}\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a1ccc35e029e05910c3c25ffa602e442b} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}!game\+Over@{game\+Over}}
+\index{game\+Over@{game\+Over}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}}
+\subsubsection{\texorpdfstring{game\+Over()}{gameOver()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Game\+Env.\+Game\+Env.\+game\+Over (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The game\+Over methods return whether or not the game ended. 
+
+\begin{DoxyReturn}{Returns}
+True if the game is in an terminal state, False otherwise 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a37712548267b91afddb6866fddf22b94}{}\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a37712548267b91afddb6866fddf22b94} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}!get\+Screen@{get\+Screen}}
+\index{get\+Screen@{get\+Screen}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}}
+\subsubsection{\texorpdfstring{get\+Screen()}{getScreen()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Game\+Env.\+Game\+Env.\+get\+Screen (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The get\+Screen method converts the game screen to a grayscale array shrink it to the configured size and returns it. 
+
+\begin{DoxyReturn}{Returns}
+A numpy array of numpy.\+float32 between 0 and 255 and of shape \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_ae8e7e56bd996ea0ce4ece1ca32f6b54a}{Game\+Env.\+out\+Size} 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a553c6eac3cac494bff5c9703dcfea2fe}{}\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a553c6eac3cac494bff5c9703dcfea2fe} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}!get\+Screen\+R\+GB@{get\+Screen\+R\+GB}}
+\index{get\+Screen\+R\+GB@{get\+Screen\+R\+GB}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}}
+\subsubsection{\texorpdfstring{get\+Screen\+R\+G\+B()}{getScreenRGB()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Game\+Env.\+Game\+Env.\+get\+Screen\+R\+GB (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The get\+Screen\+R\+GB method returns an array containing the R\+BG screen. 
+
+\begin{DoxyReturn}{Returns}
+A numpy array of numpy.\+uint8 of shape \mbox{[}\hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a2dedb2f4e5f0f1b7da2970ac89a5b544}{Game\+Env.\+screen\+Size}\mbox{[}0\mbox{]}, \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a2dedb2f4e5f0f1b7da2970ac89a5b544}{Game\+Env.\+screen\+Size}\mbox{[}1\mbox{]}, 3\mbox{]} 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_ab2efa70a8316abde73936602001654a6}{}\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_ab2efa70a8316abde73936602001654a6} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}!leg\+Actions@{leg\+Actions}}
+\index{leg\+Actions@{leg\+Actions}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}}
+\subsubsection{\texorpdfstring{leg\+Actions()}{legActions()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Game\+Env.\+Game\+Env.\+leg\+Actions (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The leg\+Actions method returns an array containing the set of legal actions. 
+
+\begin{DoxyReturn}{Returns}
+An array containing the set of legal actions 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a76014d9140e479757a52b9ceda06dd16}{}\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a76014d9140e479757a52b9ceda06dd16} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}!min\+Actions@{min\+Actions}}
+\index{min\+Actions@{min\+Actions}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}}
+\subsubsection{\texorpdfstring{min\+Actions()}{minActions()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Game\+Env.\+Game\+Env.\+min\+Actions (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The min\+Actions method retuns an array containing the minimal action set for the loaded game. 
+
+\begin{DoxyReturn}{Returns}
+An array containing the minimum set of legal actions 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_afc780b83378b9d19d9dba64711e5c2ed}{}\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_afc780b83378b9d19d9dba64711e5c2ed} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}!reset\+Game@{reset\+Game}}
+\index{reset\+Game@{reset\+Game}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}}
+\subsubsection{\texorpdfstring{reset\+Game()}{resetGame()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Game\+Env.\+Game\+Env.\+reset\+Game (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The reset\+Game method reset the game. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_ae8e7e56bd996ea0ce4ece1ca32f6b54a}{}\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_ae8e7e56bd996ea0ce4ece1ca32f6b54a} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}!out\+Size@{out\+Size}}
+\index{out\+Size@{out\+Size}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}}
+\subsubsection{\texorpdfstring{out\+Size}{outSize}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Game\+Env.\+Game\+Env.\+out\+Size}
+
+
+
+The size of the images returned by get\+Screen the form \mbox{[}height, width\mbox{]}. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a2dedb2f4e5f0f1b7da2970ac89a5b544}{}\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a2dedb2f4e5f0f1b7da2970ac89a5b544} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}!screen\+Size@{screen\+Size}}
+\index{screen\+Size@{screen\+Size}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}}
+\subsubsection{\texorpdfstring{screen\+Size}{screenSize}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Game\+Env.\+Game\+Env.\+screen\+Size}
+
+
+
+The size of the screen in the form \mbox{[}height, width\mbox{]}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{GameEnv_8py}{Game\+Env.\+py}\end{DoxyCompactItemize}

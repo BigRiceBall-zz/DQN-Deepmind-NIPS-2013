@@ -1,0 +1,396 @@
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.Plotter.\+Plotter Class Reference}
+\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Plotter.\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Plotter.\+Plotter}}
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter}{Plotter} Class provides an easy way to plot lines and distributions.  
+
+
+Inheritance diagram for D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.Plotter.\+Plotter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a781363a311a4b659f454b9f10a930fe5}{rand\+Color} ()
+\begin{DoxyCompactList}\small\item\em The rand\+Color static method computes and returns a random color. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a667c98c2620e83ae62d8cd9a9ba4e94c}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter}{Plotter} constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a8e1227cf851a49de8362084fe06846fa}{initialize} (self)
+\begin{DoxyCompactList}\small\item\em The initialize method initializes the \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter}{Plotter} class. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a5369f165b720b7867e35cb1394d1a4f7}{connect\+Signals} (self)
+\begin{DoxyCompactList}\small\item\em The connect\+Signals connects the signals to the rights methods. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a289c6002e292a7c4b60e335bddbd9ae0}{add\+Group} (self, name)
+\begin{DoxyCompactList}\small\item\em The add\+Group method add the given group to the list. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ac7b49118b884b5203067c4f976cc6158}{del\+Group} (self, name)
+\begin{DoxyCompactList}\small\item\em The del\+Group method delete the given group. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aafcbaaa8995b5e9f2859f25187895248}{add\+Plot} (self, group, name, cnt, styles)
+\begin{DoxyCompactList}\small\item\em The add\+Plot method adds a plot to the given group. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ae8f20f0c734fc1447e4093638ac8b40f}{add\+Percentile} (self, group, name, percentages\+Pairs)
+\begin{DoxyCompactList}\small\item\em The add\+Percentile methods add a percentile chart to the list. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_acc6be1793e58dc9a665702177dae7cdb}{update\+Plot} (self, group, name, x, y\+Values)
+\begin{DoxyCompactList}\small\item\em The update\+Plot method updates the given plot with the given coordinates. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a9efb9a96e31b427d493d434970279c51}{update\+Percentile} (self, group, name, x, values)
+\begin{DoxyCompactList}\small\item\em The update\+Percentile method updates the given percentile plot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a0ed150721300639b6230824109f7427b}{P\+L\+OT} = 0
+\begin{DoxyCompactList}\small\item\em Usual plot type. \end{DoxyCompactList}\item 
+int \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a1f89ddbef8de94b70bfce1c5c6427b4b}{P\+E\+RC} = 1
+\begin{DoxyCompactList}\small\item\em Percentile plot type. \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ac731a7755fab8cf0958411b81af56f55}{G\+R\+P\+\_\+\+F\+O\+N\+TS} = qtg.\+Q\+Font(\char`\"{}\char`\"{}, -\/1, qtg.\+Q\+Font.\+Black, False)
+\begin{DoxyCompactList}\small\item\em Font used to display the groups in the list. \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a526f4f1265860b0186b6232689de6335}{E\+R\+R\+O\+R\+\_\+\+F\+O\+N\+TS} = qtg.\+Q\+Font(\char`\"{}\char`\"{}, -\/1, qtg.\+Q\+Font.\+Bold , False)
+\begin{DoxyCompactList}\small\item\em Font used to display an error. \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a6b90920063b98d9487ba14c48f5af362}{P\+L\+T\+\_\+\+F\+O\+N\+TS} = qtg.\+Q\+Font()
+\begin{DoxyCompactList}\small\item\em Font used to display a plot in the list. \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a9e65187d496ef975f211f37ec66f77b0}{S\+U\+B\+\_\+\+P\+L\+T\+\_\+\+F\+O\+N\+TS} = qtg.\+Q\+Font()
+\begin{DoxyCompactList}\small\item\em Font used to display a subplot in the subplot list. \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aa599f9c39b850680c4842b8a53268882}{P\+E\+R\+\_\+\+C\+O\+L\+OR} = pg.\+mk\+Color(\char`\"{}\#ff7500\char`\"{})
+\begin{DoxyCompactList}\small\item\em Basic color used in the percentile charts. \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aa272066f3775c7e5a00e58664498b545}{F\+G\+\_\+\+E\+R\+R\+\_\+\+C\+O\+L\+OR} = pg.\+mk\+Color(\char`\"{}\#ff3e04\char`\"{})
+\begin{DoxyCompactList}\small\item\em Color used to display an error. \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a49bdb6a37de2bcff4d702417c64105ff}{G\+R\+P\+\_\+\+R\+O\+LE} = qtc.\+Qt.\+User\+Role
+\begin{DoxyCompactList}\small\item\em \textquotesingle{}Role\textquotesingle{} id for the group name \end{DoxyCompactList}\item 
+int \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aaedbcbba023e3d7730beb86579ec7efe}{P\+L\+T\+\_\+\+R\+O\+LE} = qtc.\+Qt.\+User\+Role + 1
+\begin{DoxyCompactList}\small\item\em \textquotesingle{}Role\textquotesingle{} id for the plot name \end{DoxyCompactList}\item 
+int \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ae72b47c3cf2965e2aca86ee30256edea}{E\+R\+R\+O\+R\+\_\+\+R\+O\+LE} = qtc.\+Qt.\+User\+Role + 2
+\begin{DoxyCompactList}\small\item\em \textquotesingle{}Role\textquotesingle{} id that indicates if an error already arised or not \end{DoxyCompactList}\item 
+int \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a7f8f653368bc22c7e80147b1d8dc5f18}{S\+U\+B\+\_\+\+ID} = qtc.\+Qt.\+User\+Role + 3
+\begin{DoxyCompactList}\small\item\em \textquotesingle{}Role\textquotesingle{} id for the subplot id \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aa6b7419c1641e98f1d050f4553becaf2}{update\+\_\+list\+\_\+sig} = qtc.\+pyqt\+Signal()
+\begin{DoxyCompactList}\small\item\em Signal used to ask the plotting thread to update the list of plots. \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_af89689f9142da4126b9c256efa69bec6}{update\+\_\+plot\+\_\+sig} = qtc.\+pyqt\+Signal(str, str)
+\begin{DoxyCompactList}\small\item\em Signal used to ask the plotting thread to update a plot. \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a4d72a490c71c0bb118e8c76a665a4908}{update\+\_\+percentile\+\_\+sig} = qtc.\+pyqt\+Signal(str, str)
+\begin{DoxyCompactList}\small\item\em Signal used to ask the plotting thread to update a percetile plot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter}{Plotter} Class provides an easy way to plot lines and distributions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a667c98c2620e83ae62d8cd9a9ba4e94c}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a667c98c2620e83ae62d8cd9a9ba4e94c} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter}{Plotter} constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a289c6002e292a7c4b60e335bddbd9ae0}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a289c6002e292a7c4b60e335bddbd9ae0} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!add\+Group@{add\+Group}}
+\index{add\+Group@{add\+Group}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{add\+Group()}{addGroup()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+add\+Group (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+The add\+Group method add the given group to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \+: The name of the group to add \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ae8f20f0c734fc1447e4093638ac8b40f}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ae8f20f0c734fc1447e4093638ac8b40f} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!add\+Percentile@{add\+Percentile}}
+\index{add\+Percentile@{add\+Percentile}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{add\+Percentile()}{addPercentile()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+add\+Percentile (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{group,  }\item[{}]{name,  }\item[{}]{percentages\+Pairs }\end{DoxyParamCaption})}
+
+
+
+The add\+Percentile methods add a percentile chart to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & \+: The name of the group the percentile chart belongs to \\
+\hline
+{\em name} & \+: The name of the chart \\
+\hline
+{\em percentages\+Pairs} & \+: A list of tuple of values between and including 0 and 100. If percentages\+Pairs is made of pairs (p\+\_\+i, p\+\_\+j) the chart will be made of \+:
+\begin{DoxyItemize}
+\item A line at (x, percentile(\+A(x), p\+\_\+i))
+\item A line at (x, percentile(\+A(x), p\+\_\+j))
+\item An area filled between the two previous lines with color where the alpha value is proportional to p\+\_\+i -\/ p\+\_\+j 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aafcbaaa8995b5e9f2859f25187895248}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aafcbaaa8995b5e9f2859f25187895248} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!add\+Plot@{add\+Plot}}
+\index{add\+Plot@{add\+Plot}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{add\+Plot()}{addPlot()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+add\+Plot (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{group,  }\item[{}]{name,  }\item[{}]{cnt,  }\item[{}]{styles }\end{DoxyParamCaption})}
+
+
+
+The add\+Plot method adds a plot to the given group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & \+: The name of the group the plot belongs to \\
+\hline
+{\em name} & \+: The name of the new plot to add. This name should be unique inside the given group \\
+\hline
+{\em cnt} & \+: How many lines will be plotted at the same time \\
+\hline
+{\em styles} & \+: The style of the lines to plot. Styles must have \textquotesingle{}cnt\textquotesingle{} elements. The elements in \textquotesingle{}styles\textquotesingle{} will be directly passed to \textquotesingle{}pyqtgraph.\+mk\+Pen\textquotesingle{}. See \href{http://www.pyqtgraph.org/documentation/functions.html?highlight=mkpen#pyqtgraph.mkPen}{\tt pyqtgraph.\+mk\+Pen} documentaiton for more information \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a5369f165b720b7867e35cb1394d1a4f7}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a5369f165b720b7867e35cb1394d1a4f7} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!connect\+Signals@{connect\+Signals}}
+\index{connect\+Signals@{connect\+Signals}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{connect\+Signals()}{connectSignals()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+connect\+Signals (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The connect\+Signals connects the signals to the rights methods. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ac7b49118b884b5203067c4f976cc6158}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ac7b49118b884b5203067c4f976cc6158} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!del\+Group@{del\+Group}}
+\index{del\+Group@{del\+Group}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{del\+Group()}{delGroup()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+del\+Group (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+The del\+Group method delete the given group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \+: The name of the group to delete \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a8e1227cf851a49de8362084fe06846fa}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a8e1227cf851a49de8362084fe06846fa} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!initialize@{initialize}}
+\index{initialize@{initialize}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+initialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The initialize method initializes the \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter}{Plotter} class. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a781363a311a4b659f454b9f10a930fe5}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a781363a311a4b659f454b9f10a930fe5} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!rand\+Color@{rand\+Color}}
+\index{rand\+Color@{rand\+Color}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{rand\+Color()}{randColor()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+rand\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The rand\+Color static method computes and returns a random color. 
+
+\begin{DoxyReturn}{Returns}
+A Q\+Color with random channels R,G,B 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a9efb9a96e31b427d493d434970279c51}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a9efb9a96e31b427d493d434970279c51} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!update\+Percentile@{update\+Percentile}}
+\index{update\+Percentile@{update\+Percentile}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{update\+Percentile()}{updatePercentile()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+update\+Percentile (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{group,  }\item[{}]{name,  }\item[{}]{x,  }\item[{}]{values }\end{DoxyParamCaption})}
+
+
+
+The update\+Percentile method updates the given percentile plot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & \+: The group the plot belongs to \\
+\hline
+{\em name} & \+: The name of the plot to update \\
+\hline
+{\em x} & \+: The x coordinate associated to the distribution to plot \\
+\hline
+{\em values} & \+: The distribution to plot \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_acc6be1793e58dc9a665702177dae7cdb}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_acc6be1793e58dc9a665702177dae7cdb} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!update\+Plot@{update\+Plot}}
+\index{update\+Plot@{update\+Plot}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{update\+Plot()}{updatePlot()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+update\+Plot (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{group,  }\item[{}]{name,  }\item[{}]{x,  }\item[{}]{y\+Values }\end{DoxyParamCaption})}
+
+
+
+The update\+Plot method updates the given plot with the given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & \+: The group the plot belongs to \\
+\hline
+{\em name} & \+: The name of the plot to update \\
+\hline
+{\em x} & \+: The x coordinate for the given y values \\
+\hline
+{\em y\+Values} & \+: The y values to plot \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a526f4f1265860b0186b6232689de6335}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a526f4f1265860b0186b6232689de6335} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!E\+R\+R\+O\+R\+\_\+\+F\+O\+N\+TS@{E\+R\+R\+O\+R\+\_\+\+F\+O\+N\+TS}}
+\index{E\+R\+R\+O\+R\+\_\+\+F\+O\+N\+TS@{E\+R\+R\+O\+R\+\_\+\+F\+O\+N\+TS}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+F\+O\+N\+TS}{ERROR\_FONTS}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+E\+R\+R\+O\+R\+\_\+\+F\+O\+N\+TS = qtg.\+Q\+Font(\char`\"{}\char`\"{}, -\/1, qtg.\+Q\+Font.\+Bold , False)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Font used to display an error. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ae72b47c3cf2965e2aca86ee30256edea}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ae72b47c3cf2965e2aca86ee30256edea} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!E\+R\+R\+O\+R\+\_\+\+R\+O\+LE@{E\+R\+R\+O\+R\+\_\+\+R\+O\+LE}}
+\index{E\+R\+R\+O\+R\+\_\+\+R\+O\+LE@{E\+R\+R\+O\+R\+\_\+\+R\+O\+LE}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+R\+O\+LE}{ERROR\_ROLE}}
+{\footnotesize\ttfamily int D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+E\+R\+R\+O\+R\+\_\+\+R\+O\+LE = qtc.\+Qt.\+User\+Role + 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\textquotesingle{}Role\textquotesingle{} id that indicates if an error already arised or not 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aa272066f3775c7e5a00e58664498b545}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aa272066f3775c7e5a00e58664498b545} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!F\+G\+\_\+\+E\+R\+R\+\_\+\+C\+O\+L\+OR@{F\+G\+\_\+\+E\+R\+R\+\_\+\+C\+O\+L\+OR}}
+\index{F\+G\+\_\+\+E\+R\+R\+\_\+\+C\+O\+L\+OR@{F\+G\+\_\+\+E\+R\+R\+\_\+\+C\+O\+L\+OR}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{F\+G\+\_\+\+E\+R\+R\+\_\+\+C\+O\+L\+OR}{FG\_ERR\_COLOR}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+F\+G\+\_\+\+E\+R\+R\+\_\+\+C\+O\+L\+OR = pg.\+mk\+Color(\char`\"{}\#ff3e04\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Color used to display an error. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ac731a7755fab8cf0958411b81af56f55}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_ac731a7755fab8cf0958411b81af56f55} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!G\+R\+P\+\_\+\+F\+O\+N\+TS@{G\+R\+P\+\_\+\+F\+O\+N\+TS}}
+\index{G\+R\+P\+\_\+\+F\+O\+N\+TS@{G\+R\+P\+\_\+\+F\+O\+N\+TS}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{G\+R\+P\+\_\+\+F\+O\+N\+TS}{GRP\_FONTS}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+G\+R\+P\+\_\+\+F\+O\+N\+TS = qtg.\+Q\+Font(\char`\"{}\char`\"{}, -\/1, qtg.\+Q\+Font.\+Black, False)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Font used to display the groups in the list. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a49bdb6a37de2bcff4d702417c64105ff}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a49bdb6a37de2bcff4d702417c64105ff} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!G\+R\+P\+\_\+\+R\+O\+LE@{G\+R\+P\+\_\+\+R\+O\+LE}}
+\index{G\+R\+P\+\_\+\+R\+O\+LE@{G\+R\+P\+\_\+\+R\+O\+LE}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{G\+R\+P\+\_\+\+R\+O\+LE}{GRP\_ROLE}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+G\+R\+P\+\_\+\+R\+O\+LE = qtc.\+Qt.\+User\+Role\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\textquotesingle{}Role\textquotesingle{} id for the group name 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aa599f9c39b850680c4842b8a53268882}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aa599f9c39b850680c4842b8a53268882} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!P\+E\+R\+\_\+\+C\+O\+L\+OR@{P\+E\+R\+\_\+\+C\+O\+L\+OR}}
+\index{P\+E\+R\+\_\+\+C\+O\+L\+OR@{P\+E\+R\+\_\+\+C\+O\+L\+OR}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{P\+E\+R\+\_\+\+C\+O\+L\+OR}{PER\_COLOR}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+P\+E\+R\+\_\+\+C\+O\+L\+OR = pg.\+mk\+Color(\char`\"{}\#ff7500\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Basic color used in the percentile charts. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a1f89ddbef8de94b70bfce1c5c6427b4b}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a1f89ddbef8de94b70bfce1c5c6427b4b} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!P\+E\+RC@{P\+E\+RC}}
+\index{P\+E\+RC@{P\+E\+RC}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{P\+E\+RC}{PERC}}
+{\footnotesize\ttfamily int D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+P\+E\+RC = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Percentile plot type. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a0ed150721300639b6230824109f7427b}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a0ed150721300639b6230824109f7427b} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!P\+L\+OT@{P\+L\+OT}}
+\index{P\+L\+OT@{P\+L\+OT}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{P\+L\+OT}{PLOT}}
+{\footnotesize\ttfamily int D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+P\+L\+OT = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Usual plot type. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a6b90920063b98d9487ba14c48f5af362}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a6b90920063b98d9487ba14c48f5af362} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!P\+L\+T\+\_\+\+F\+O\+N\+TS@{P\+L\+T\+\_\+\+F\+O\+N\+TS}}
+\index{P\+L\+T\+\_\+\+F\+O\+N\+TS@{P\+L\+T\+\_\+\+F\+O\+N\+TS}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{P\+L\+T\+\_\+\+F\+O\+N\+TS}{PLT\_FONTS}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+P\+L\+T\+\_\+\+F\+O\+N\+TS = qtg.\+Q\+Font()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Font used to display a plot in the list. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aaedbcbba023e3d7730beb86579ec7efe}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aaedbcbba023e3d7730beb86579ec7efe} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!P\+L\+T\+\_\+\+R\+O\+LE@{P\+L\+T\+\_\+\+R\+O\+LE}}
+\index{P\+L\+T\+\_\+\+R\+O\+LE@{P\+L\+T\+\_\+\+R\+O\+LE}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{P\+L\+T\+\_\+\+R\+O\+LE}{PLT\_ROLE}}
+{\footnotesize\ttfamily int D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+P\+L\+T\+\_\+\+R\+O\+LE = qtc.\+Qt.\+User\+Role + 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\textquotesingle{}Role\textquotesingle{} id for the plot name 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a7f8f653368bc22c7e80147b1d8dc5f18}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a7f8f653368bc22c7e80147b1d8dc5f18} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!S\+U\+B\+\_\+\+ID@{S\+U\+B\+\_\+\+ID}}
+\index{S\+U\+B\+\_\+\+ID@{S\+U\+B\+\_\+\+ID}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{S\+U\+B\+\_\+\+ID}{SUB\_ID}}
+{\footnotesize\ttfamily int D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+S\+U\+B\+\_\+\+ID = qtc.\+Qt.\+User\+Role + 3\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\textquotesingle{}Role\textquotesingle{} id for the subplot id 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a9e65187d496ef975f211f37ec66f77b0}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a9e65187d496ef975f211f37ec66f77b0} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!S\+U\+B\+\_\+\+P\+L\+T\+\_\+\+F\+O\+N\+TS@{S\+U\+B\+\_\+\+P\+L\+T\+\_\+\+F\+O\+N\+TS}}
+\index{S\+U\+B\+\_\+\+P\+L\+T\+\_\+\+F\+O\+N\+TS@{S\+U\+B\+\_\+\+P\+L\+T\+\_\+\+F\+O\+N\+TS}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{S\+U\+B\+\_\+\+P\+L\+T\+\_\+\+F\+O\+N\+TS}{SUB\_PLT\_FONTS}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+S\+U\+B\+\_\+\+P\+L\+T\+\_\+\+F\+O\+N\+TS = qtg.\+Q\+Font()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Font used to display a subplot in the subplot list. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aa6b7419c1641e98f1d050f4553becaf2}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_aa6b7419c1641e98f1d050f4553becaf2} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!update\+\_\+list\+\_\+sig@{update\+\_\+list\+\_\+sig}}
+\index{update\+\_\+list\+\_\+sig@{update\+\_\+list\+\_\+sig}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{update\+\_\+list\+\_\+sig}{update\_list\_sig}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+update\+\_\+list\+\_\+sig = qtc.\+pyqt\+Signal()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Signal used to ask the plotting thread to update the list of plots. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a4d72a490c71c0bb118e8c76a665a4908}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_a4d72a490c71c0bb118e8c76a665a4908} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!update\+\_\+percentile\+\_\+sig@{update\+\_\+percentile\+\_\+sig}}
+\index{update\+\_\+percentile\+\_\+sig@{update\+\_\+percentile\+\_\+sig}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{update\+\_\+percentile\+\_\+sig}{update\_percentile\_sig}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+update\+\_\+percentile\+\_\+sig = qtc.\+pyqt\+Signal(str, str)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Signal used to ask the plotting thread to update a percetile plot. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_af89689f9142da4126b9c256efa69bec6}{}\label{classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter_af89689f9142da4126b9c256efa69bec6} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}!update\+\_\+plot\+\_\+sig@{update\+\_\+plot\+\_\+sig}}
+\index{update\+\_\+plot\+\_\+sig@{update\+\_\+plot\+\_\+sig}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Plotter\+::\+Plotter}}
+\subsubsection{\texorpdfstring{update\+\_\+plot\+\_\+sig}{update\_plot\_sig}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Plotter.\+Plotter.\+update\+\_\+plot\+\_\+sig = qtc.\+pyqt\+Signal(str, str)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Signal used to ask the plotting thread to update a plot. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Plotter_8py}{Plotter.\+py}\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.agent.\+Agent.\+Agent Class Reference}
+\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+agent.\+Agent.\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+agent.\+Agent.\+Agent}}
+
+
+The agent class is the base for any intelligent agent.  
+
+
+Inheritance diagram for D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.agent.\+Agent.\+Agent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_a3902963eaecb4b9dbe9bd0c06c2f9f01}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, message)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent}{Agent} constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_ae41ae14645afb3279112e9d02991be99}{run} (self)
+\begin{DoxyCompactList}\small\item\em The run method overrides the threading.\+Thread.\+run method. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_a6cb1d914ca2954f968d2512f4dac3a36}{continue\+Processing} (self)
+\begin{DoxyCompactList}\small\item\em The continue\+Processing return wheter the agent should continue current job or if it should stop. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_a1662a18fd255f7c6e7a696ad4dd45304}{stop\+Processing} (self)
+\begin{DoxyCompactList}\small\item\em The stop\+Processing method tells the agent to stop what it\textquotesingle{}s doing. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_ae3b350736392d8ce39e7973d630f437a}{train} (self)
+\begin{DoxyCompactList}\small\item\em The train method is an abstract method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The agent class is the base for any intelligent agent. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_a3902963eaecb4b9dbe9bd0c06c2f9f01}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_a3902963eaecb4b9dbe9bd0c06c2f9f01} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Agent.\+Agent.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{message }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent}{Agent} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \+: A message object that allows the agent to communicate with the main thread \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_a6cb1d914ca2954f968d2512f4dac3a36}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_a6cb1d914ca2954f968d2512f4dac3a36} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent}!continue\+Processing@{continue\+Processing}}
+\index{continue\+Processing@{continue\+Processing}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent}}
+\subsubsection{\texorpdfstring{continue\+Processing()}{continueProcessing()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Agent.\+Agent.\+continue\+Processing (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The continue\+Processing return wheter the agent should continue current job or if it should stop. 
+
+\begin{DoxyReturn}{Returns}
+True if the agent should contine, False if it should stop 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_ae41ae14645afb3279112e9d02991be99}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_ae41ae14645afb3279112e9d02991be99} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent}!run@{run}}
+\index{run@{run}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Agent.\+Agent.\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The run method overrides the threading.\+Thread.\+run method. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_a1662a18fd255f7c6e7a696ad4dd45304}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_a1662a18fd255f7c6e7a696ad4dd45304} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent}!stop\+Processing@{stop\+Processing}}
+\index{stop\+Processing@{stop\+Processing}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent}}
+\subsubsection{\texorpdfstring{stop\+Processing()}{stopProcessing()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Agent.\+Agent.\+stop\+Processing (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The stop\+Processing method tells the agent to stop what it\textquotesingle{}s doing. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_ae3b350736392d8ce39e7973d630f437a}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1Agent_1_1Agent_ae3b350736392d8ce39e7973d630f437a} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent}!train@{train}}
+\index{train@{train}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Agent\+::\+Agent}}
+\subsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Agent.\+Agent.\+train (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The train method is an abstract method. 
+
+An actual agent should override this method with one that trains the agent and loop until stop\+Processing is called by the main thread 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+agent/\hyperlink{Agent_8py}{Agent.\+py}\end{DoxyCompactItemize}

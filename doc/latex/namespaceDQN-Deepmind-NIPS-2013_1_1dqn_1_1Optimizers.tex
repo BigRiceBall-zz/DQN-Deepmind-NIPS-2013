@@ -1,0 +1,84 @@
+\hypertarget{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1Optimizers}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.dqn.\+Optimizers Namespace Reference}
+\label{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1Optimizers}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+dqn.\+Optimizers@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+dqn.\+Optimizers}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1Optimizers_a83bf1e32b34c7f7e9c7a8755969513ed}{R\+M\+S\+Prop} (grads, params, learning\+\_\+rate=0.\+1, momentum=0.\+5, decay=0.\+01, epsilon=1e-\/8)
+\begin{DoxyCompactList}\small\item\em The R\+M\+S\+Prop function implements the R\+M\+S\+Prop algorithm. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1Optimizers_a1c829fc193cf21632ab890a2bf5a3353}{clip\+By\+Norm} (grads, ts)
+\begin{DoxyCompactList}\small\item\em The clip\+By\+Norm function implements a gradient norm clipping. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1Optimizers_a1c829fc193cf21632ab890a2bf5a3353}{}\label{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1Optimizers_a1c829fc193cf21632ab890a2bf5a3353} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Optimizers@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Optimizers}!clip\+By\+Norm@{clip\+By\+Norm}}
+\index{clip\+By\+Norm@{clip\+By\+Norm}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Optimizers@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Optimizers}}
+\subsubsection{\texorpdfstring{clip\+By\+Norm()}{clipByNorm()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.dqn.\+Optimizers.\+clip\+By\+Norm (\begin{DoxyParamCaption}\item[{}]{grads,  }\item[{}]{ts }\end{DoxyParamCaption})}
+
+
+
+The clip\+By\+Norm function implements a gradient norm clipping. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grads} & \+: A gradient list as returned by theano.\+tensor.\+grad(...) \\
+\hline
+{\em ts} & \+: The threshold\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A grads\+\_\+clipped list which the elements are the elements of \textquotesingle{}grads\textquotesingle{} clipped so that $||grads\_clipped|| = \min(ts, ||grads||)$ 
+\end{DoxyReturn}
+\hypertarget{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1Optimizers_a83bf1e32b34c7f7e9c7a8755969513ed}{}\label{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1Optimizers_a83bf1e32b34c7f7e9c7a8755969513ed} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Optimizers@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Optimizers}!R\+M\+S\+Prop@{R\+M\+S\+Prop}}
+\index{R\+M\+S\+Prop@{R\+M\+S\+Prop}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Optimizers@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Optimizers}}
+\subsubsection{\texorpdfstring{R\+M\+S\+Prop()}{RMSProp()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.dqn.\+Optimizers.\+R\+M\+S\+Prop (\begin{DoxyParamCaption}\item[{}]{grads,  }\item[{}]{params,  }\item[{}]{learning\+\_\+rate = {\ttfamily 0.1},  }\item[{}]{momentum = {\ttfamily 0.5},  }\item[{}]{decay = {\ttfamily 0.01},  }\item[{}]{epsilon = {\ttfamily 1e-\/8} }\end{DoxyParamCaption})}
+
+
+
+The R\+M\+S\+Prop function implements the R\+M\+S\+Prop algorithm. 
+
+Given\+:
+\begin{DoxyItemize}
+\item $f(\boldsymbol{\theta})$ \+: the function to minimize
+\item $\boldsymbol{\theta}_t = (\theta_{t,0}, ..., \theta_{t,n-1})$ \+: the value of the parameters at the time step $t$ that we want to update to minimize $f$
+\item $\boldsymbol{\theta}_0$ \+: the initial value of the $\theta$ parameters
+\item $\boldsymbol{m}_t = (m_{t,0}, ..., m_{t,n-1})$ \+: An array of size $n$ such that $m_{0,i} = 0\,\forall i \in \{0, ..., n - 1\}$
+\item $\boldsymbol{u}_t = (u_{t,0}, ..., u_{t,n-1})$ \+: An array of size $n$ such that $u_{0,i} = 0\,\forall i \in \{0, ..., n - 1\}$
+\item $\lambda$ \+: The learning rate
+\item $\mu$ \+: The momentum
+\item $\delta$ \+: The decay
+\item $\epsilon$ \+: A small number to avoid dividing by zero
+\end{DoxyItemize}
+
+At each iteration, the R\+M\+S\+Prop algorithm performs the following updates
+\begin{DoxyEnumerate}
+\item $\boldsymbol{g}_t = \boldsymbol{\nabla_\theta} f(\boldsymbol{\theta})|_{\boldsymbol{\theta}= \boldsymbol{\theta_{t-1}}}$
+\item $m_{t,i} = \delta\,m_{t-1,i} + (1-\delta) g_{t,i}^2\quad\quad \forall i \in \{0, ..., n - 1\}$
+\item $u_{t,i} = \mu\,u_{t-1, i} + \lambda \frac{g_{t,i}} {\sqrt{m_{t,i} + \epsilon}}\quad\quad \forall i \in \{0, ..., n - 1\}$
+\item $\boldsymbol{\theta}_t = \boldsymbol{\theta}_{t-1} + \boldsymbol{u}_t$
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em grads} & \+: A list of the component of the gradient of the function to minimize derived with respect to the parameters to modify \\
+\hline
+{\em params} & \+: A list of parameters to update \\
+\hline
+{\em learning\+\_\+rate} & \+: The learning rate \\
+\hline
+{\em momentum} & \+: The momentum \\
+\hline
+{\em decay} & \+: The decay \\
+\hline
+{\em epsilon} & \+: A small value to avoid dividing by zero\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of updates operation to pass to a theano function in order to apply R\+M\+S\+Prop algorithm
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+The \href{http://blog.sigopt.com/post/141501625253/sigopt-for-ml-tensorflow-convnets-on-a-budget}{\tt Sig\+Opt Blog} where the algorithm comes from 
+\end{DoxySeeAlso}

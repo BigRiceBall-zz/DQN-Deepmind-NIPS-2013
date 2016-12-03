@@ -1,0 +1,165 @@
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent Class Reference}
+\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent}}
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent}{Deep\+Mind\+Agent} class implements the agent described by Deepmind in their article of 2013 \char`\"{}\+Playing Atari with Deep Reinforcement Learning\char`\"{}.  
+
+
+Inheritance diagram for D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a9ea279d64a3b2bced6901c55df78c7e4}{create\+New\+Agent} (message, saver, plotter, env, name)
+\begin{DoxyCompactList}\small\item\em The create\+New\+Agent static method returns a new agent with the given name. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a6271c469fb0446dd92a94ce447ba3695}{load\+Agent} (message, saver, plotter, env, agent\+Id)
+\begin{DoxyCompactList}\small\item\em The load\+Agent static method returns an agent build from a previously saved agent using the last network saved by this agent. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a8bbe0f1127879b400142d5cf6fea5384}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, message, saver, plotter, env, agent\+Id)
+\begin{DoxyCompactList}\small\item\em The agent agent constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_ae3b30ec9438fbaa91c440415e43844fe}{load\+Params} (self)
+\begin{DoxyCompactList}\small\item\em The load\+Params object load the parameters of the current agent saved in the saver object. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a63ce7439d1d1989c262489e08e04e204}{load\+Network} (self, network\+Id)
+\begin{DoxyCompactList}\small\item\em The load\+Network object load the network associated with the given id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a63e93b51f5b355b0896957d4484a8fb3}{id}
+\begin{DoxyCompactList}\small\item\em The id of the agent as used in the saver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent}{Deep\+Mind\+Agent} class implements the agent described by Deepmind in their article of 2013 \char`\"{}\+Playing Atari with Deep Reinforcement Learning\char`\"{}. 
+
+\begin{DoxySeeAlso}{See also}
+$<$a href\char`\"{}https\+://arxiv.\+org/abs/1312.\+5602\char`\"{}$>$Playing Atari with Deep Reinforcement Learning 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a8bbe0f1127879b400142d5cf6fea5384}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a8bbe0f1127879b400142d5cf6fea5384} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{message,  }\item[{}]{saver,  }\item[{}]{plotter,  }\item[{}]{env,  }\item[{}]{agent\+Id }\end{DoxyParamCaption})}
+
+
+
+The agent agent constructor. 
+
+This shouldn\textquotesingle{}t be directly called. Instread, the static methods create\+New\+Agent or load\+Agent should be used
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \+: The message object that the agent uses to communicate whith the main thread \\
+\hline
+{\em saver} & \+: The saver object that the agent uses to save itself \\
+\hline
+{\em plotter} & \+: The plotter object the agent can use to plot some datas \\
+\hline
+{\em env} & \+: The game\+Environement the agent will use as input \\
+\hline
+{\em agent\+Id} & \+: The id of the agent \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a9ea279d64a3b2bced6901c55df78c7e4}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a9ea279d64a3b2bced6901c55df78c7e4} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}!create\+New\+Agent@{create\+New\+Agent}}
+\index{create\+New\+Agent@{create\+New\+Agent}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}}
+\subsubsection{\texorpdfstring{create\+New\+Agent()}{createNewAgent()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent.\+create\+New\+Agent (\begin{DoxyParamCaption}\item[{}]{message,  }\item[{}]{saver,  }\item[{}]{plotter,  }\item[{}]{env,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+The create\+New\+Agent static method returns a new agent with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \+: The message object that the agent uses to communicate whith the main thread \\
+\hline
+{\em saver} & \+: The saver object that the agent uses to save itself \\
+\hline
+{\em plotter} & \+: The plotter object the agent can use to plot some datas \\
+\hline
+{\em env} & \+: The game\+Environement the agent will use as input \\
+\hline
+{\em name} & \+: The name of the agent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new agent that\textquotesingle{}s saved in the saver object 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a6271c469fb0446dd92a94ce447ba3695}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a6271c469fb0446dd92a94ce447ba3695} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}!load\+Agent@{load\+Agent}}
+\index{load\+Agent@{load\+Agent}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}}
+\subsubsection{\texorpdfstring{load\+Agent()}{loadAgent()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent.\+load\+Agent (\begin{DoxyParamCaption}\item[{}]{message,  }\item[{}]{saver,  }\item[{}]{plotter,  }\item[{}]{env,  }\item[{}]{agent\+Id }\end{DoxyParamCaption})}
+
+
+
+The load\+Agent static method returns an agent build from a previously saved agent using the last network saved by this agent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \+: The message object that the agent uses to communicate whith the main thread \\
+\hline
+{\em saver} & \+: The saver object that the agent uses to save itself \\
+\hline
+{\em plotter} & \+: The plotter object the agent can use to plot some datas \\
+\hline
+{\em env} & \+: The game\+Environement the agent will use as input \\
+\hline
+{\em agent\+Id} & \+: The id of the agent to copy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new agent initilized with the datas previously stored in the saver object 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a63ce7439d1d1989c262489e08e04e204}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a63ce7439d1d1989c262489e08e04e204} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}!load\+Network@{load\+Network}}
+\index{load\+Network@{load\+Network}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}}
+\subsubsection{\texorpdfstring{load\+Network()}{loadNetwork()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent.\+load\+Network (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{network\+Id }\end{DoxyParamCaption})}
+
+
+
+The load\+Network object load the network associated with the given id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em network\+Id} & \+: The id of the network to load \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_ae3b30ec9438fbaa91c440415e43844fe}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_ae3b30ec9438fbaa91c440415e43844fe} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}!load\+Params@{load\+Params}}
+\index{load\+Params@{load\+Params}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}}
+\subsubsection{\texorpdfstring{load\+Params()}{loadParams()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent.\+load\+Params (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The load\+Params object load the parameters of the current agent saved in the saver object. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a63e93b51f5b355b0896957d4484a8fb3}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a63e93b51f5b355b0896957d4484a8fb3} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}!id@{id}}
+\index{id@{id}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent.\+id}
+
+
+
+The id of the agent as used in the saver. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+agent/\hyperlink{DeepMindAgent_8py}{Deep\+Mind\+Agent.\+py}\end{DoxyCompactItemize}

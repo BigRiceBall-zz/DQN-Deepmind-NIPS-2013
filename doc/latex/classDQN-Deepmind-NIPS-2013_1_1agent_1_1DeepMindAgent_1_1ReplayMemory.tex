@@ -1,0 +1,132 @@
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.agent.\+Deep\+Mind\+Agent.\+Replay\+Memory Class Reference}
+\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+agent.\+Deep\+Mind\+Agent.\+Replay\+Memory@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+agent.\+Deep\+Mind\+Agent.\+Replay\+Memory}}
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory}{Replay\+Memory} class is a list of past experiences as defined in the paper \href{https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf}{\tt Playing Atari with Deep Reinforcement Learning}  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_a8b43f49e7cc41952febfe6bdf7003a83}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, capacity, act\+Cnt, c, h, w)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory}{Replay\+Memory} constructor initializes a \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory}{Replay\+Memory} of the given capacity. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_aef90d1c859c72ea6de32ed97cf0f4a7c}{\+\_\+\+\_\+len\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em The {\bfseries len} method returns the number of experiences stored in the replay memory. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_ab920b49aedb6569d214cf0e6fd390cea}{add\+Images} (self, imgs)
+\begin{DoxyCompactList}\small\item\em The add\+Images method adds the given images to the image set. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_ab43dd0161bc7e1dc749a6188062880fa}{add\+Experience} (self, img, a, r, t)
+\begin{DoxyCompactList}\small\item\em Adds the given experience to the replay memory. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_a345939d730803f20978861c2ba6cd397}{minibatch} (self, size)
+\begin{DoxyCompactList}\small\item\em The minibatch method returns a random minibatch which size is the minimum between the given size and the size of the replay memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory}{Replay\+Memory} class is a list of past experiences as defined in the paper \href{https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf}{\tt Playing Atari with Deep Reinforcement Learning} 
+
+The replay memory is made of an Image\+Set that will keep given images in memory. If \textquotesingle{}c\textquotesingle{} is the number of images a state is made of, the replay memory keeps the ids of the \textquotesingle{}c\textquotesingle{} last inserted images. Then when a new experience is inserted into the replay memory, only one image has to be given. The replay memory assumes that the initial state related to this experience is made of the \textquotesingle{}c\textquotesingle{} last images and that the terminal state of this experience is made of the \textquotesingle{}c-\/1\textquotesingle{} last inserted images plus the new given image. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_a8b43f49e7cc41952febfe6bdf7003a83}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_a8b43f49e7cc41952febfe6bdf7003a83} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Replay\+Memory.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{capacity,  }\item[{}]{act\+Cnt,  }\item[{}]{c,  }\item[{}]{h,  }\item[{}]{w }\end{DoxyParamCaption})}
+
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory}{Replay\+Memory} constructor initializes a \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory}{Replay\+Memory} of the given capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & \+: The number of elements the replay memory is able to store before erasing its oldest inserted element to insert new ones \\
+\hline
+{\em c} & \+: The number of channels (i.\+e. images) per sequence \\
+\hline
+{\em h} & \+: The heights of an images \\
+\hline
+{\em w} & \+: The width of an image \\
+\hline
+{\em act\+Cnt} & \+: The number of possible actions \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_aef90d1c859c72ea6de32ed97cf0f4a7c}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_aef90d1c859c72ea6de32ed97cf0f4a7c} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory}!\+\_\+\+\_\+len\+\_\+\+\_\+@{\+\_\+\+\_\+len\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+len\+\_\+\+\_\+@{\+\_\+\+\_\+len\+\_\+\+\_\+}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+len\+\_\+\+\_\+()}{\_\_len\_\_()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Replay\+Memory.\+\_\+\+\_\+len\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The {\bfseries len} method returns the number of experiences stored in the replay memory. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_ab43dd0161bc7e1dc749a6188062880fa}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_ab43dd0161bc7e1dc749a6188062880fa} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory}!add\+Experience@{add\+Experience}}
+\index{add\+Experience@{add\+Experience}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory}}
+\subsubsection{\texorpdfstring{add\+Experience()}{addExperience()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Replay\+Memory.\+add\+Experience (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{img,  }\item[{}]{a,  }\item[{}]{r,  }\item[{}]{t }\end{DoxyParamCaption})}
+
+
+
+Adds the given experience to the replay memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & \+: The new image to add to the image set \\
+\hline
+{\em a} & \+: The id of the last action taken \\
+\hline
+{\em r} & \+: The last reward perceived \\
+\hline
+{\em t} & \+: Wheter the reached state is a terminal state or not \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_ab920b49aedb6569d214cf0e6fd390cea}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_ab920b49aedb6569d214cf0e6fd390cea} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory}!add\+Images@{add\+Images}}
+\index{add\+Images@{add\+Images}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory}}
+\subsubsection{\texorpdfstring{add\+Images()}{addImages()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Replay\+Memory.\+add\+Images (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{imgs }\end{DoxyParamCaption})}
+
+
+
+The add\+Images method adds the given images to the image set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imgs} & \+: A list of the images to add to the set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_a345939d730803f20978861c2ba6cd397}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory_a345939d730803f20978861c2ba6cd397} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory}!minibatch@{minibatch}}
+\index{minibatch@{minibatch}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Replay\+Memory}}
+\subsubsection{\texorpdfstring{minibatch()}{minibatch()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Replay\+Memory.\+minibatch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{size }\end{DoxyParamCaption})}
+
+
+
+The minibatch method returns a random minibatch which size is the minimum between the given size and the size of the replay memory. 
+
+If the replay memory is empty, the method returns None
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \+: The size of the minibatch to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This method returns None if the replay memory is empty. Otherwise it returns a minibatch made of n sample drawn from the set of stored experiences, where \textquotesingle{}n\textquotesingle{} is the minimum between the length of the replay memory and the given size. The returned minibatch is a tuple which elements are the following\+:
+\begin{DoxyItemize}
+\item s\+\_\+t \+: an array of shape \mbox{[}n, c, h, w\mbox{]} which contains the n initial states of the minibatch
+\item s\+\_\+t1 \+: an array of the shape \mbox{[}n, c, h, w\mbox{]} which contains the n states reached from respectively the n states stored in s\+\_\+t
+\item a\+\_\+t \+: an array of shape \mbox{[}n, act\+Cnt\mbox{]} where every row is full of 0 except for the value at the id corresponding to the action take in the respective n states s\+\_\+t, which is then 1
+\item r\+\_\+t \+: an array of shape \mbox{[}n\mbox{]} which entries are the rewards perceived while going from the n respective states s\+\_\+t to the n respective states s\+\_\+t1
+\item t \+: an array of shape \mbox{[}n\mbox{]} which entries indicate if the n respective states s\+\_\+t1 are terminals or not 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+agent/\hyperlink{DeepMindAgent_8py}{Deep\+Mind\+Agent.\+py}\end{DoxyCompactItemize}

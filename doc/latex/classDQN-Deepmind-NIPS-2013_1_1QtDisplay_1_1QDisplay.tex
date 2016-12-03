@@ -1,0 +1,183 @@
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.Qt\+Display.\+Q\+Display Class Reference}
+\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Qt\+Display.\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Qt\+Display.\+Q\+Display}}
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}{Q\+Display} class provides a way to integrate different window or Qt applications.  
+
+
+Inheritance diagram for D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.Qt\+Display.\+Q\+Display\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a4bf429fba1b45e555b41cac72f3d6f6a}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}{Q\+Display} constructor initializes a new \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}{Q\+Display} object. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_ae9c369b6776a7ca0805044f597be7cb2}{run} (self, ready)
+\begin{DoxyCompactList}\small\item\em The run method initializes the object and connect the signals to their handlers. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a12e947e8732fe3848a4746d4d3cf75c3}{initialize} (self)
+\begin{DoxyCompactList}\small\item\em The initialize method initializes the application. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_ab3bca6243b3015a5bb26d0c00ba80d8f}{connect\+Signals} (self)
+\begin{DoxyCompactList}\small\item\em The connect\+Signals method connects the signals to their handlers. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_adf1649fb26b3af16c155db2adf1275d2}{create\+Plotter} (self)
+\begin{DoxyCompactList}\small\item\em The create\+Plotter method sends a signal to the thread that manage the display in order to ask him to create a plotter object. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_af84de3d09bc8fc27f09f5e6a3c4775a1}{create\+Env\+Display} (self, env, freq)
+\begin{DoxyCompactList}\small\item\em The create\+Env\+Display method sends a signal to the thread that manage the display in order to ask him to create an \hyperlink{namespaceDQN-Deepmind-NIPS-2013_1_1EnvDisplay}{Env\+Display} object. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_aa399a47324e5e725fd5f5fd393e997ef}{plotter} (self)
+\begin{DoxyCompactList}\small\item\em The plotter method wait for the plotter object to be initialized and returns the object. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a50d2c693245a9a3f617ed2295e4d87f3}{env\+Display} (self)
+\begin{DoxyCompactList}\small\item\em The env\+Display method wait for the env\+Display object to be initialized and returns the object. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_ac4d39e4b6aff27f85280f53878adee37}{exit} (self)
+\begin{DoxyCompactList}\small\item\em The exit method force the event loop to quit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a9fce093a7c41ba05405ccdea20f542ad}{create\+\_\+plotter\+\_\+sig} = qtc.\+pyqt\+Signal()
+\begin{DoxyCompactList}\small\item\em The create\+\_\+plotter\+\_\+sig signal signals the the thread that manages the display to create a new plotter object. \end{DoxyCompactList}\item 
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_adf7d2844b0fc2026a3d4c2ed3d1218b9}{create\+\_\+env\+\_\+display\+\_\+sig} = qtc.\+pyqt\+Signal(object, int)
+\begin{DoxyCompactList}\small\item\em The create\+\_\+env\+\_\+display\+\_\+sig signal signals the the thread that manages the display to create a new environment display object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}{Q\+Display} class provides a way to integrate different window or Qt applications. 
+
+This class is a Qt\+Core.\+Q\+Object that hold the Q\+Application and starts the event loop when the \textquotesingle{}run\textquotesingle{} method is called 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a4bf429fba1b45e555b41cac72f3d6f6a}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a4bf429fba1b45e555b41cac72f3d6f6a} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Q\+Display.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}{Q\+Display} constructor initializes a new \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}{Q\+Display} object. 
+
+There should only be one and only one \hyperlink{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay}{Q\+Display} object 
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_ab3bca6243b3015a5bb26d0c00ba80d8f}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_ab3bca6243b3015a5bb26d0c00ba80d8f} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}!connect\+Signals@{connect\+Signals}}
+\index{connect\+Signals@{connect\+Signals}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}}
+\subsubsection{\texorpdfstring{connect\+Signals()}{connectSignals()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Q\+Display.\+connect\+Signals (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The connect\+Signals method connects the signals to their handlers. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_af84de3d09bc8fc27f09f5e6a3c4775a1}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_af84de3d09bc8fc27f09f5e6a3c4775a1} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}!create\+Env\+Display@{create\+Env\+Display}}
+\index{create\+Env\+Display@{create\+Env\+Display}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}}
+\subsubsection{\texorpdfstring{create\+Env\+Display()}{createEnvDisplay()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Q\+Display.\+create\+Env\+Display (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{env,  }\item[{}]{freq }\end{DoxyParamCaption})}
+
+
+
+The create\+Env\+Display method sends a signal to the thread that manage the display in order to ask him to create an \hyperlink{namespaceDQN-Deepmind-NIPS-2013_1_1EnvDisplay}{Env\+Display} object. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_adf1649fb26b3af16c155db2adf1275d2}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_adf1649fb26b3af16c155db2adf1275d2} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}!create\+Plotter@{create\+Plotter}}
+\index{create\+Plotter@{create\+Plotter}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}}
+\subsubsection{\texorpdfstring{create\+Plotter()}{createPlotter()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Q\+Display.\+create\+Plotter (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The create\+Plotter method sends a signal to the thread that manage the display in order to ask him to create a plotter object. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a50d2c693245a9a3f617ed2295e4d87f3}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a50d2c693245a9a3f617ed2295e4d87f3} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}!env\+Display@{env\+Display}}
+\index{env\+Display@{env\+Display}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}}
+\subsubsection{\texorpdfstring{env\+Display()}{envDisplay()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Q\+Display.\+env\+Display (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The env\+Display method wait for the env\+Display object to be initialized and returns the object. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the env\+Display object managed by this class 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_ac4d39e4b6aff27f85280f53878adee37}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_ac4d39e4b6aff27f85280f53878adee37} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}!exit@{exit}}
+\index{exit@{exit}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}}
+\subsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Q\+Display.\+exit (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The exit method force the event loop to quit. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a12e947e8732fe3848a4746d4d3cf75c3}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a12e947e8732fe3848a4746d4d3cf75c3} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}!initialize@{initialize}}
+\index{initialize@{initialize}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Q\+Display.\+initialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The initialize method initializes the application. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_aa399a47324e5e725fd5f5fd393e997ef}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_aa399a47324e5e725fd5f5fd393e997ef} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}!plotter@{plotter}}
+\index{plotter@{plotter}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}}
+\subsubsection{\texorpdfstring{plotter()}{plotter()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Q\+Display.\+plotter (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The plotter method wait for the plotter object to be initialized and returns the object. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the plotter object managed by this class 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_ae9c369b6776a7ca0805044f597be7cb2}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_ae9c369b6776a7ca0805044f597be7cb2} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}!run@{run}}
+\index{run@{run}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Q\+Display.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ready }\end{DoxyParamCaption})}
+
+
+
+The run method initializes the object and connect the signals to their handlers. 
+
+Then, it set the given event and start the event loop
+
+
+\begin{DoxyParams}{Parameters}
+{\em ready} & \+: A threading.\+Event object that will be set after the signals are connected \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_adf7d2844b0fc2026a3d4c2ed3d1218b9}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_adf7d2844b0fc2026a3d4c2ed3d1218b9} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}!create\+\_\+env\+\_\+display\+\_\+sig@{create\+\_\+env\+\_\+display\+\_\+sig}}
+\index{create\+\_\+env\+\_\+display\+\_\+sig@{create\+\_\+env\+\_\+display\+\_\+sig}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}}
+\subsubsection{\texorpdfstring{create\+\_\+env\+\_\+display\+\_\+sig}{create\_env\_display\_sig}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Q\+Display.\+create\+\_\+env\+\_\+display\+\_\+sig = qtc.\+pyqt\+Signal(object, int)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The create\+\_\+env\+\_\+display\+\_\+sig signal signals the the thread that manages the display to create a new environment display object. 
+
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a9fce093a7c41ba05405ccdea20f542ad}{}\label{classDQN-Deepmind-NIPS-2013_1_1QtDisplay_1_1QDisplay_a9fce093a7c41ba05405ccdea20f542ad} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}!create\+\_\+plotter\+\_\+sig@{create\+\_\+plotter\+\_\+sig}}
+\index{create\+\_\+plotter\+\_\+sig@{create\+\_\+plotter\+\_\+sig}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Qt\+Display\+::\+Q\+Display}}
+\subsubsection{\texorpdfstring{create\+\_\+plotter\+\_\+sig}{create\_plotter\_sig}}
+{\footnotesize\ttfamily D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Qt\+Display.\+Q\+Display.\+create\+\_\+plotter\+\_\+sig = qtc.\+pyqt\+Signal()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The create\+\_\+plotter\+\_\+sig signal signals the the thread that manages the display to create a new plotter object. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{QtDisplay_8py}{Qt\+Display.\+py}\end{DoxyCompactItemize}

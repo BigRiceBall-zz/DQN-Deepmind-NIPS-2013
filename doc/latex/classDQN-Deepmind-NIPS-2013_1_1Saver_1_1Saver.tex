@@ -1,0 +1,298 @@
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.Saver.\+Saver Class Reference}
+\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Saver.\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+Saver.\+Saver}}
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver}{Saver} class provides an easy way to save or load, an agent, its network and statistics about its performances.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_ac1c5a74d16e09f25b884196bda20f70a}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, db\+Path)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver}{Saver} class constructor initialize the \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver}{Saver} object. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a4f61e8fbd52eef88616ef8e9ef0fab2b}{list\+Agents} (self)
+\begin{DoxyCompactList}\small\item\em The list\+Agents query the database and returns a list of tuples representing the available agents. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a8deee83c5bcdd58d10abc7dadeb8d153}{list\+Networks} (self, agent\+Id)
+\begin{DoxyCompactList}\small\item\em The list\+Networks method returns a list all the network availables for the given agent. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a47c6eac5868ed0525a258211a4d75cd9}{list\+Datasets} (self, shape, min\+Size, max\+Size)
+\begin{DoxyCompactList}\small\item\em The list\+Datasets method returns a list of the datasets matching the given shape and which length is between the given sizes. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a21a3603e2a8e8d12d60a2640b224b952}{new\+Agent} (self, name, agent\+Type, params)
+\begin{DoxyCompactList}\small\item\em The new\+Agent method records a new agent in the database. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aa0d2a62b7e514dc527745f846924e70e}{save\+Agent} (self, agent\+Id, params)
+\begin{DoxyCompactList}\small\item\em The save\+Agent methods overwrites the parameters recorder for the given agent. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aebf1fa14b77298919410191ecbab6fe5}{save\+Network} (self, agent\+Id, info, network)
+\begin{DoxyCompactList}\small\item\em The save\+Network method adds the given network to the list of the networks available for the given agent. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_ae1370bef68104eb715e1387d69bb7cf1}{save\+Stat} (self, agent\+Id, network\+Id, name, epoch, value)
+\begin{DoxyCompactList}\small\item\em The save\+Stat method saves the given statistics into the database. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a5c4872622dfd891849a22e447ec7d902}{new\+Dataset} (self, length, shape, data)
+\begin{DoxyCompactList}\small\item\em The new\+Dataset method save a new dataset into the database. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aaf903c7b667b1909a17beb60c13f2398}{load\+Agent} (self, agent\+Id)
+\begin{DoxyCompactList}\small\item\em The load\+Agent method returns the parameters associated to the given agent. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a90f2e74db8a2b69b94959945ffb896f6}{load\+Network} (self, agent\+Id, network\+Id=None)
+\begin{DoxyCompactList}\small\item\em The load\+Network method returns the desired network. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a76d60329698faf415c4ed0dae362f53e}{load\+Dataset} (self, set\+Id)
+\begin{DoxyCompactList}\small\item\em The load\+Dataset method return the desired dataset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_ab44237c14a7cc898a5952c42bb1fbfe0}{D\+E\+E\+P\+\_\+\+M\+I\+N\+D\+\_\+\+A\+G\+E\+NT} = \char`\"{}Deep\+Mind\+Agent\char`\"{}
+\begin{DoxyCompactList}\small\item\em Type for an agent implementing the algorithm developped by deepmind in their paper of 2013. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver}{Saver} class provides an easy way to save or load, an agent, its network and statistics about its performances. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_ac1c5a74d16e09f25b884196bda20f70a}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_ac1c5a74d16e09f25b884196bda20f70a} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{db\+Path }\end{DoxyParamCaption})}
+
+
+
+The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver}{Saver} class constructor initialize the \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver}{Saver} object. 
+
+The constructor connects to or creates the sqlite database to use and creates the tables it needs if its required.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Path} & \+: The path to the database to connect to or to create \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a4f61e8fbd52eef88616ef8e9ef0fab2b}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a4f61e8fbd52eef88616ef8e9ef0fab2b} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!list\+Agents@{list\+Agents}}
+\index{list\+Agents@{list\+Agents}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{list\+Agents()}{listAgents()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+list\+Agents (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The list\+Agents query the database and returns a list of tuples representing the available agents. 
+
+\begin{DoxyReturn}{Returns}
+A list of tuples with agent\textquotesingle{}s attributes \+: (id, name, type, creation time stamp, parameters) 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a47c6eac5868ed0525a258211a4d75cd9}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a47c6eac5868ed0525a258211a4d75cd9} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!list\+Datasets@{list\+Datasets}}
+\index{list\+Datasets@{list\+Datasets}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{list\+Datasets()}{listDatasets()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+list\+Datasets (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{shape,  }\item[{}]{min\+Size,  }\item[{}]{max\+Size }\end{DoxyParamCaption})}
+
+
+
+The list\+Datasets method returns a list of the datasets matching the given shape and which length is between the given sizes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & \+: The shape of the desired data set \\
+\hline
+{\em min\+Size} & \+: The minimum number of elements in the dataset \\
+\hline
+{\em max\+Size} & \+: The maximum number of elements in the dataset\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of tuples containing the id and the size of the available datasets (id, size) 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a8deee83c5bcdd58d10abc7dadeb8d153}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a8deee83c5bcdd58d10abc7dadeb8d153} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!list\+Networks@{list\+Networks}}
+\index{list\+Networks@{list\+Networks}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{list\+Networks()}{listNetworks()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+list\+Networks (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{agent\+Id }\end{DoxyParamCaption})}
+
+
+
+The list\+Networks method returns a list all the network availables for the given agent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent\+Id} & \+: The id of the agent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of tuples with the parameters of the available networks (id, agent\textquotesingle{}s id, informations, creation timestamp, network) 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aaf903c7b667b1909a17beb60c13f2398}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aaf903c7b667b1909a17beb60c13f2398} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!load\+Agent@{load\+Agent}}
+\index{load\+Agent@{load\+Agent}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{load\+Agent()}{loadAgent()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+load\+Agent (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{agent\+Id }\end{DoxyParamCaption})}
+
+
+
+The load\+Agent method returns the parameters associated to the given agent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent\+Id} & \+: The id of the desired agent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The previously saved parameters 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a76d60329698faf415c4ed0dae362f53e}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a76d60329698faf415c4ed0dae362f53e} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!load\+Dataset@{load\+Dataset}}
+\index{load\+Dataset@{load\+Dataset}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{load\+Dataset()}{loadDataset()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+load\+Dataset (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{set\+Id }\end{DoxyParamCaption})}
+
+
+
+The load\+Dataset method return the desired dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set\+Id} & \+: The id of the dataset to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The dataset previously saved 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a90f2e74db8a2b69b94959945ffb896f6}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a90f2e74db8a2b69b94959945ffb896f6} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!load\+Network@{load\+Network}}
+\index{load\+Network@{load\+Network}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{load\+Network()}{loadNetwork()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+load\+Network (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{agent\+Id,  }\item[{}]{network\+Id = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+The load\+Network method returns the desired network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent\+Id} & \+: The id of the agent that created the network \\
+\hline
+{\em network\+Id} & \+: The id of the network to load. If None (default), the last saved network is returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The previously saved network 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a21a3603e2a8e8d12d60a2640b224b952}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a21a3603e2a8e8d12d60a2640b224b952} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!new\+Agent@{new\+Agent}}
+\index{new\+Agent@{new\+Agent}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{new\+Agent()}{newAgent()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+new\+Agent (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{agent\+Type,  }\item[{}]{params }\end{DoxyParamCaption})}
+
+
+
+The new\+Agent method records a new agent in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \+: The name of the agent \\
+\hline
+{\em agent\+Type} & \+: The agent\textquotesingle{}s type \\
+\hline
+{\em params} & \+: The agent\textquotesingle{}s parameters to save\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of the newly created agent 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a5c4872622dfd891849a22e447ec7d902}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a5c4872622dfd891849a22e447ec7d902} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!new\+Dataset@{new\+Dataset}}
+\index{new\+Dataset@{new\+Dataset}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{new\+Dataset()}{newDataset()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+new\+Dataset (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{length,  }\item[{}]{shape,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+The new\+Dataset method save a new dataset into the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & \+: The number of elemnts in the dataset \\
+\hline
+{\em shape} & \+: The shape of the dataset to save \\
+\hline
+{\em data} & \+: The dataset to save\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of the newly created dataset 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aa0d2a62b7e514dc527745f846924e70e}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aa0d2a62b7e514dc527745f846924e70e} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!save\+Agent@{save\+Agent}}
+\index{save\+Agent@{save\+Agent}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{save\+Agent()}{saveAgent()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+save\+Agent (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{agent\+Id,  }\item[{}]{params }\end{DoxyParamCaption})}
+
+
+
+The save\+Agent methods overwrites the parameters recorder for the given agent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent\+Id} & \+: The id of the agent to update \\
+\hline
+{\em params} & \+: The new parameters to save \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aebf1fa14b77298919410191ecbab6fe5}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aebf1fa14b77298919410191ecbab6fe5} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!save\+Network@{save\+Network}}
+\index{save\+Network@{save\+Network}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{save\+Network()}{saveNetwork()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+save\+Network (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{agent\+Id,  }\item[{}]{info,  }\item[{}]{network }\end{DoxyParamCaption})}
+
+
+
+The save\+Network method adds the given network to the list of the networks available for the given agent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent\+Id} & \+: The id of the agent the network to save belongs to \\
+\hline
+{\em info} & \+: Some information associated to network to save \\
+\hline
+{\em network} & \+: The network to save\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of the newly saved network 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_ae1370bef68104eb715e1387d69bb7cf1}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_ae1370bef68104eb715e1387d69bb7cf1} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!save\+Stat@{save\+Stat}}
+\index{save\+Stat@{save\+Stat}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{save\+Stat()}{saveStat()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+save\+Stat (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{agent\+Id,  }\item[{}]{network\+Id,  }\item[{}]{name,  }\item[{}]{epoch,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+The save\+Stat method saves the given statistics into the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent\+Id} & \+: The id of the agent assiciated to the statistics to save \\
+\hline
+{\em network\+Id} & \+: The id of the network used to perform these statistics \\
+\hline
+{\em name} & \+: A name associated to these statistics \\
+\hline
+{\em epoch} & \+: The epoch \\
+\hline
+{\em value} & \+: The value to save \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_ab44237c14a7cc898a5952c42bb1fbfe0}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_ab44237c14a7cc898a5952c42bb1fbfe0} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!D\+E\+E\+P\+\_\+\+M\+I\+N\+D\+\_\+\+A\+G\+E\+NT@{D\+E\+E\+P\+\_\+\+M\+I\+N\+D\+\_\+\+A\+G\+E\+NT}}
+\index{D\+E\+E\+P\+\_\+\+M\+I\+N\+D\+\_\+\+A\+G\+E\+NT@{D\+E\+E\+P\+\_\+\+M\+I\+N\+D\+\_\+\+A\+G\+E\+NT}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{D\+E\+E\+P\+\_\+\+M\+I\+N\+D\+\_\+\+A\+G\+E\+NT}{DEEP\_MIND\_AGENT}}
+{\footnotesize\ttfamily string D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+D\+E\+E\+P\+\_\+\+M\+I\+N\+D\+\_\+\+A\+G\+E\+NT = \char`\"{}Deep\+Mind\+Agent\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Type for an agent implementing the algorithm developped by deepmind in their paper of 2013. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Saver_8py}{Saver.\+py}\end{DoxyCompactItemize}

@@ -1,0 +1,130 @@
+\hypertarget{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.dqn.\+Conv\+Net Namespace Reference}
+\label{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+dqn.\+Conv\+Net@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+dqn.\+Conv\+Net}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1ActivationFunctions}{Activation\+Functions}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1ActivationFunctions}{Activation\+Functions} class is an enumaration of valid activation funcitons. \end{DoxyCompactList}\item 
+class \hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1InitMethod}{Init\+Method}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1InitMethod}{Init\+Method} inner is an enumeration of valid initialization for the functions \textquotesingle{}weights\textquotesingle{} and \textquotesingle{}biases\textquotesingle{}. \end{DoxyCompactList}\item 
+class \hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1Paddings}{Paddings}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1Paddings}{Paddings} class enumerates the valid values for padding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_afb9c5707e3aa3d00b7b1d7158618ffe3}{shared} (shape, method, init\+Arg, name)
+\begin{DoxyCompactList}\small\item\em The shared function returns a shared variable of the type float32. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_a45a4079e9e7d0d95c8e1de160f76145d}{F\+C\+Layer} (layer\+In, input\+Shape, filters, act, name, clip\+Min=None, clip\+Max=None)
+\begin{DoxyCompactList}\small\item\em The F\+C\+Layer function returns a the weights, the biases and the output of a fully connected layer and the shape of its output. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_a23d5e8c8b82d7eb3e282d83e650fea38}{Conv\+Layer} (layer\+In, input\+Shape, filters, f\+Height, f\+Width, v\+Stride, h\+Stride, in\+Pad, act, name, clip\+Min=None, clip\+Max=None)
+\begin{DoxyCompactList}\small\item\em The Conv\+Layer function returns a the weights, the biases and the output of a convolutional layer and the shape of its output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_a23d5e8c8b82d7eb3e282d83e650fea38}{}\label{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_a23d5e8c8b82d7eb3e282d83e650fea38} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net}!Conv\+Layer@{Conv\+Layer}}
+\index{Conv\+Layer@{Conv\+Layer}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net}}
+\subsubsection{\texorpdfstring{Conv\+Layer()}{ConvLayer()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.dqn.\+Conv\+Net.\+Conv\+Layer (\begin{DoxyParamCaption}\item[{}]{layer\+In,  }\item[{}]{input\+Shape,  }\item[{}]{filters,  }\item[{}]{f\+Height,  }\item[{}]{f\+Width,  }\item[{}]{v\+Stride,  }\item[{}]{h\+Stride,  }\item[{}]{in\+Pad,  }\item[{}]{act,  }\item[{}]{name,  }\item[{}]{clip\+Min = {\ttfamily None},  }\item[{}]{clip\+Max = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+The Conv\+Layer function returns a the weights, the biases and the output of a convolutional layer and the shape of its output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\+In} & \+: The input of the layer \\
+\hline
+{\em input\+Shape} & \+: The shape of the input of the layer. This must be a list with four dimensions \+: {\ttfamily \mbox{[} batch, channels, height, width \mbox{]}} \\
+\hline
+{\em filters} & \+: The number of filters \\
+\hline
+{\em f\+Height} & \+: The filters\textquotesingle{} height \\
+\hline
+{\em f\+Width} & \+: The filters\textquotesingle{} width \\
+\hline
+{\em v\+Stride} & \+: The convolution vertical stride \\
+\hline
+{\em h\+Stride} & \+: The convolution horizontal stride \\
+\hline
+{\em in\+Pad} & \+: The type of padding to apply. It must be one of the value enumarated in \hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1Paddings}{Conv\+Net.\+Paddings}, an int or a pair of int \\
+\hline
+{\em act} & \+: The activation function of the layer. Is must be one of the value enumarated in \textquotesingle{}\hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1ActivationFunctions}{Activation\+Functions}\textquotesingle{} \\
+\hline
+{\em name} & \+: The name of the layer \\
+\hline
+{\em clip\+Min} & \+: The minimum value allowed for the gradient compoments associated to this layer. If None (default), the clipping is disabled \\
+\hline
+{\em clip\+Max} & \+: The maximum value allowed for the gradient compoments associated to this layer. If None (default), the clipping is disabled\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tuple containing the newly created parameters, the output and its shape \+: (w, b, y, shape) 
+\end{DoxyReturn}
+\hypertarget{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_a45a4079e9e7d0d95c8e1de160f76145d}{}\label{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_a45a4079e9e7d0d95c8e1de160f76145d} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net}!F\+C\+Layer@{F\+C\+Layer}}
+\index{F\+C\+Layer@{F\+C\+Layer}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net}}
+\subsubsection{\texorpdfstring{F\+C\+Layer()}{FCLayer()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.dqn.\+Conv\+Net.\+F\+C\+Layer (\begin{DoxyParamCaption}\item[{}]{layer\+In,  }\item[{}]{input\+Shape,  }\item[{}]{filters,  }\item[{}]{act,  }\item[{}]{name,  }\item[{}]{clip\+Min = {\ttfamily None},  }\item[{}]{clip\+Max = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+The F\+C\+Layer function returns a the weights, the biases and the output of a fully connected layer and the shape of its output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\+In} & \+: The input of the layer \\
+\hline
+{\em input\+Shape} & \+: A list containing the dimensions of the input in the form {\ttfamily \mbox{[} batch, d0, d1, ..., dn \mbox{]}} \\
+\hline
+{\em filters} & \+: The number of filters \\
+\hline
+{\em act} & \+: The activation function. This must be one of the value enumerated in Layer.\+Activation\+Functions \\
+\hline
+{\em name} & \+: The name of the layer \\
+\hline
+{\em clip\+Min} & \+: The minimum value allowed for the gradient compoments associated to this layer. If None (default), the clipping is disabled \\
+\hline
+{\em clip\+Max} & \+: The maximum value allowed for the gradient compoments associated to this layer. If None (default), the clipping is disabled\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tuple containing the newly created variables, the output and its shape \+: (w, b, y, shape) 
+\end{DoxyReturn}
+\hypertarget{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_afb9c5707e3aa3d00b7b1d7158618ffe3}{}\label{namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_afb9c5707e3aa3d00b7b1d7158618ffe3} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net}!shared@{shared}}
+\index{shared@{shared}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::dqn\+::\+Conv\+Net}}
+\subsubsection{\texorpdfstring{shared()}{shared()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.dqn.\+Conv\+Net.\+shared (\begin{DoxyParamCaption}\item[{}]{shape,  }\item[{}]{method,  }\item[{}]{init\+Arg,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+The shared function returns a shared variable of the type float32. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & \+: The shape of the variable to create \\
+\hline
+{\em method} & \+: The initialization method to use. This must be one of the values enumerated in \hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1InitMethod}{Init\+Method} \\
+\hline
+{\em init\+Arg} & \+: A value to use to initialize the variable. It\textquotesingle{}s effects depend on the \textquotesingle{}method\textquotesingle{} param \\
+\hline
+{\em name} & \+: The name of the variable \begin{tabularx}{\linewidth}{|*{2}{>{\raggedright\arraybackslash}X|}}\hline
+\rowcolor{\tableheadbgcolor}{\bf method }&{\bf init\+Arg }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}{\bf method }&{\bf init\+Arg }\\\cline{1-2}
+\endhead
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1InitMethod_ace1d7606694c2c82f5b4640a34b58a1c}{Init\+Method.\+constant} &The constant value to assign to the the elements of the variable  \\\cline{1-2}
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1InitMethod_a40f9ca5144076077f6c2a28ca6983c1d}{Init\+Method.\+xavier} &The number of inputs  \\\cline{1-2}
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1InitMethod_ac26aff95fc96a42c00df1ef7cd7c7282}{Init\+Method.\+uniform} &A tuple containing the upper and the lower boundaries  \\\cline{1-2}
+\hyperlink{classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1InitMethod_ad08fb9ba0ef227e2465bc0949566edac}{Init\+Method.\+normal} &A tuple containing the mean and the standard deviation  \\\cline{1-2}
+\end{tabularx}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Theano shared variable 
+\end{DoxyReturn}

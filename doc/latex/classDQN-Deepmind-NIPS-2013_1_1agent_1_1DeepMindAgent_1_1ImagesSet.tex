@@ -1,0 +1,108 @@
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet}{}\section{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.agent.\+Deep\+Mind\+Agent.\+Images\+Set Class Reference}
+\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet}\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+agent.\+Deep\+Mind\+Agent.\+Images\+Set@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.\+agent.\+Deep\+Mind\+Agent.\+Images\+Set}}
+
+
+The Image\+Set class implement an image container.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_ad08d7c16326d59f705dfe03ebf28120d}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, chunk\+Size, h, w)
+\begin{DoxyCompactList}\small\item\em The Image\+Set constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_a27898f9b6851b1e27e34be9842859c7f}{add\+Images} (self, img\+List)
+\begin{DoxyCompactList}\small\item\em The add\+Images method adds the given images to the set. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_a044f2ad869a3ff4cf61a7e6eeccc502c}{image} (self, slot)
+\begin{DoxyCompactList}\small\item\em The image method returns the image stored at the given slot. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_a5f0032044a746fce8cdcccedc8059b57}{free} (self, slots)
+\begin{DoxyCompactList}\small\item\em The free method free the given slots. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Image\+Set class implement an image container. 
+
+The Image\+Set class expects that the images to store are numpy arrays of np.\+float32 of shape \mbox{[}h, w\mbox{]} where h is the height of the image and w its width.
+
+If the set if full, this class pre-\/allocate an array of N images before storing new images.
+
+The images stored in the set are actually copied 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_ad08d7c16326d59f705dfe03ebf28120d}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_ad08d7c16326d59f705dfe03ebf28120d} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Images\+Set.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{chunk\+Size,  }\item[{}]{h,  }\item[{}]{w }\end{DoxyParamCaption})}
+
+
+
+The Image\+Set constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+Size} & \+: The size by witch the set well be increased every time it\textquotesingle{}s full and images are inserted \\
+\hline
+{\em h} & \+: The images\textquotesingle{} height \\
+\hline
+{\em w} & \+: The images\textquotesingle{} width \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_a27898f9b6851b1e27e34be9842859c7f}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_a27898f9b6851b1e27e34be9842859c7f} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set}!add\+Images@{add\+Images}}
+\index{add\+Images@{add\+Images}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set}}
+\subsubsection{\texorpdfstring{add\+Images()}{addImages()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Images\+Set.\+add\+Images (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{img\+List }\end{DoxyParamCaption})}
+
+
+
+The add\+Images method adds the given images to the set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+List} & \+: An iterable structure containing the images to copy to the set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list if slots where the images where stored 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_a5f0032044a746fce8cdcccedc8059b57}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_a5f0032044a746fce8cdcccedc8059b57} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set}!free@{free}}
+\index{free@{free}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set}}
+\subsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Images\+Set.\+free (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{slots }\end{DoxyParamCaption})}
+
+
+
+The free method free the given slots. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slots} & \+: An iterable structure containing the slots to free \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_a044f2ad869a3ff4cf61a7e6eeccc502c}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ImagesSet_a044f2ad869a3ff4cf61a7e6eeccc502c} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set}!image@{image}}
+\index{image@{image}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Images\+Set}}
+\subsubsection{\texorpdfstring{image()}{image()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Images\+Set.\+image (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{slot }\end{DoxyParamCaption})}
+
+
+
+The image method returns the image stored at the given slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot} & \+: The identifier of the slot where the image is stored\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The requested image 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+agent/\hyperlink{DeepMindAgent_8py}{Deep\+Mind\+Agent.\+py}\end{DoxyCompactItemize}
