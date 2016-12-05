@@ -14,7 +14,7 @@ The following dependencies are crucial for this project and are used by the agen
 * __cv2__: The cv2 module is used to resize the images from ALE to feed the network used by the agent. The version used is the 3.1.0
 
 ##### Other dependencies
-These dependencies are used by
+These dependencies are used to save the agent, display the game or plot some statistics.
 * __PyQt__: PyQt version 4.8.7 is used to display the game and to build the window where the plots are displayed.
 * __pyqtgraph__: The plots and percentile plots are displayed thanks to pyqtgraph version 0.10.0.
 * __sqlite3__: The agent's data and the statistics collected during the training are saved in an sqlite database.
