@@ -23,7 +23,7 @@ The rows of are made of 18 bricks each and every one of them destroyed bring poi
 <table>
   <tr>
     <td>
-      <img src="./pictures/breakout/breakout.svg" alt="Breakout layout"/>
+      <img src="https://cdn.rawgit.com/Nimoab/DQN-Deepmind-NIPS-2013/766fc956/results/pictures/breakout/breakout.svg" alt="Breakout layout"/>
     </td>
     <td>
       <img width="293"
@@ -93,7 +93,7 @@ The default network initializes its weights by the method called Xavier and its 
 
 <table>
   <tr>
-    <td><img src="./pictures/network/network.svg" alt="Deep Q Network" /></td>
+    <td><img src="https://cdn.rawgit.com/Nimoab/DQN-Deepmind-NIPS-2013/766fc956/results/pictures/network/network.svg" alt="Deep Q Network" /></td>
   </tr>
   <tr>
     <td><i>Fig.3: Structure of the deep Q network </i></td>
@@ -146,10 +146,10 @@ Several tests will now be performed playing breakout and changing one parameter 
 <table>
   <tr>
     <td>
-      <img src="./pictures/results/00_ref.svg" alt="Deepmind results"/>
+      <img src="https://cdn.rawgit.com/Nimoab/DQN-Deepmind-NIPS-2013/766fc956/results/pictures/results/00_ref.svg" alt="Deepmind results"/>
     </td>
     <td>
-      <img src="./pictures/results/01_xav.svg" alt="This implementation results"/>
+      <img src="https://cdn.rawgit.com/Nimoab/DQN-Deepmind-NIPS-2013/766fc956/results/pictures/results/01_xav.svg" alt="This implementation results"/>
     </td>
   </tr>
   <tr>
@@ -173,10 +173,10 @@ Here, two other initialization method will be tried: (1) the weights and biases 
 <table>
   <tr>
     <td>
-      <img src="./pictures/results/01_nor.svg" alt="Init. normal(0, 0.01)"/>
+      <img src="https://cdn.rawgit.com/Nimoab/DQN-Deepmind-NIPS-2013/766fc956/results/pictures/results/01_nor.svg" alt="Init. normal(0, 0.01)"/>
     </td>
     <td>
-      <img src="./pictures/results/01_uni.svg" alt="Init. uniform [-0.01;0.01]"/>
+      <img src="https://cdn.rawgit.com/Nimoab/DQN-Deepmind-NIPS-2013/766fc956/results/pictures/results/01_uni.svg" alt="Init. uniform [-0.01;0.01]"/>
     </td>
   </tr>
   <tr>
@@ -192,7 +192,7 @@ In both cases, the learning is still there. However, the results are still not a
 <table>
   <tr>
     <td>
-      <img src="./pictures/results/01_cmp.svg" alt="Init. compare"/>
+      <img src="https://cdn.rawgit.com/Nimoab/DQN-Deepmind-NIPS-2013/766fc956/results/pictures/results/01_cmp.svg" alt="Init. compare"/>
     </td>
   </tr>
   <tr>
@@ -287,7 +287,7 @@ And, finally, the figures bellow plot the distributions of the score got while p
 
 <table>
   <tr>
-    <td><img src="./pictures/results/01_xav_distr.svg"
+    <td><img src="https://cdn.rawgit.com/Nimoab/DQN-Deepmind-NIPS-2013/766fc956/results/pictures/results/01_xav_distr.svg"
              alt="Distribution of the result over 1000 games (xavier)"</td>
   </tr>
   <tr>
@@ -296,7 +296,7 @@ And, finally, the figures bellow plot the distributions of the score got while p
            playing <b>1000 games</b></i></td>
   </tr>
   <tr>
-    <td><img src="./pictures/results/01_nor_distr.svg"
+    <td><img src="https://cdn.rawgit.com/Nimoab/DQN-Deepmind-NIPS-2013/766fc956/results/pictures/results/01_nor_distr.svg"
              alt="Distribution of the result over 1000 games (normal)"</td>
   </tr>
   <tr>
@@ -305,7 +305,7 @@ And, finally, the figures bellow plot the distributions of the score got while p
            after playing <b>1000 games</b></i></td>
   </tr>
   <tr>
-    <td><img src="./pictures/results/01_uni_distr.svg"
+    <td><img src="https://cdn.rawgit.com/Nimoab/DQN-Deepmind-NIPS-2013/766fc956/results/pictures/results/01_uni_distr.svg"
              alt="Distribution of the result over 1000 games (uniform)"</td>
   </tr>
   <tr>
