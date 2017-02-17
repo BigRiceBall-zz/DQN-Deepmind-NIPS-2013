@@ -30,6 +30,8 @@ def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aaf903c7b667b1909a1
 \begin{DoxyCompactList}\small\item\em The load\+Agent method returns the parameters associated to the given agent. \end{DoxyCompactList}\item 
 def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a90f2e74db8a2b69b94959945ffb896f6}{load\+Network} (self, agent\+Id, network\+Id=None)
 \begin{DoxyCompactList}\small\item\em The load\+Network method returns the desired network. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aad377d9e28499a19a591d080e6a0df63}{load\+Network\+Epoch} (self, agent\+Id, epoch)
+\begin{DoxyCompactList}\small\item\em The load\+Network\+Epoch returns the id of the network linked to the stat recorded for the given agent at the given epoch. \end{DoxyCompactList}\item 
 def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a76d60329698faf415c4ed0dae362f53e}{load\+Dataset} (self, set\+Id)
 \begin{DoxyCompactList}\small\item\em The load\+Dataset method return the desired dataset. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
@@ -171,6 +173,26 @@ The load\+Network method returns the desired network.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 The previously saved network 
+\end{DoxyReturn}
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aad377d9e28499a19a591d080e6a0df63}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_aad377d9e28499a19a591d080e6a0df63} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!load\+Network\+Epoch@{load\+Network\+Epoch}}
+\index{load\+Network\+Epoch@{load\+Network\+Epoch}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}}
+\subsubsection{\texorpdfstring{load\+Network\+Epoch()}{loadNetworkEpoch()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Saver.\+Saver.\+load\+Network\+Epoch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{agent\+Id,  }\item[{}]{epoch }\end{DoxyParamCaption})}
+
+
+
+The load\+Network\+Epoch returns the id of the network linked to the stat recorded for the given agent at the given epoch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent\+Id} & \+: The id of the agent that trained the network \\
+\hline
+{\em epoch} & \+: The epoch when the stat was recorded\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of the network 
 \end{DoxyReturn}
 \hypertarget{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a21a3603e2a8e8d12d60a2640b224b952}{}\label{classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver_a21a3603e2a8e8d12d60a2640b224b952} 
 \index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Saver\+::\+Saver}!new\+Agent@{new\+Agent}}

@@ -23,7 +23,9 @@ def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a675bec246ea3ed
 def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_afc780b83378b9d19d9dba64711e5c2ed}{reset\+Game} (self)
 \begin{DoxyCompactList}\small\item\em The reset\+Game method reset the game. \end{DoxyCompactList}\item 
 def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_a1ccc35e029e05910c3c25ffa602e442b}{game\+Over} (self)
-\begin{DoxyCompactList}\small\item\em The game\+Over methods return whether or not the game ended. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The game\+Over methods return whether or not the game ended. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_aed0bd85608c8373dd1ccfb27b9ae79bf}{save\+Frame} (self, folder, filename=None)
+\begin{DoxyCompactList}\small\item\em The save\+Frame method saves the current frame as a P\+NG file in the given folder. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -145,6 +147,25 @@ An array containing the minimum set of legal actions
 
 The reset\+Game method reset the game. 
 
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_aed0bd85608c8373dd1ccfb27b9ae79bf}{}\label{classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv_aed0bd85608c8373dd1ccfb27b9ae79bf} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}!save\+Frame@{save\+Frame}}
+\index{save\+Frame@{save\+Frame}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::\+Game\+Env\+::\+Game\+Env}}
+\subsubsection{\texorpdfstring{save\+Frame()}{saveFrame()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.Game\+Env.\+Game\+Env.\+save\+Frame (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{folder,  }\item[{}]{filename = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+The save\+Frame method saves the current frame as a P\+NG file in the given folder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder} & \+: Path the the folder where to save the frame \\
+\hline
+{\em filename} & \+: Name of the file to create. If \char`\"{}filename\char`\"{} doesn\textquotesingle{}t end with \char`\"{}.\+P\+N\+G\char`\"{} or \char`\"{}.\+png\char`\"{}, \char`\"{}.\+png\char`\"{} is appended. If filename is None (default), the created file follow the following pattern\+: \char`\"{}creation date of this 
+                    object\char`\"{}\+\_\+frame\+\_\+\char`\"{}frame number since the begining of 
+                    the episode\char`\"{}.png \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Data Documentation}

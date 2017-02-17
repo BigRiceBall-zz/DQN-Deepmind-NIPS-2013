@@ -2,8 +2,8 @@ var searchData=
 [
   ['randcolor',['randColor',['../classDQN-Deepmind-NIPS-2013_1_1Plotter_1_1Plotter.html#a781363a311a4b659f454b9f10a930fe5',1,'DQN-Deepmind-NIPS-2013::Plotter::Plotter']]],
   ['read',['read',['../classDQN-Deepmind-NIPS-2013_1_1Message_1_1Message.html#a7f12ede11926bee5d5b3946375f28156',1,'DQN-Deepmind-NIPS-2013::Message::Message']]],
-  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['relu',['relu',['../classDQN-Deepmind-NIPS-2013_1_1dqn_1_1ConvNet_1_1ActivationFunctions.html#a3684db68eadb8c00ed214af7bcbb2e3c',1,'DQN-Deepmind-NIPS-2013::dqn::ConvNet::ActivationFunctions']]],
+  ['replay',['replay',['../classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent.html#af6fed7cfbd89dfe3e1d625842e9364de',1,'DQN-Deepmind-NIPS-2013::agent::DeepMindAgent::DeepMindAgent']]],
   ['replaymemory',['ReplayMemory',['../classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1ReplayMemory.html',1,'DQN-Deepmind-NIPS-2013::agent::DeepMindAgent']]],
   ['resetgame',['resetGame',['../classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv.html#afc780b83378b9d19d9dba64711e5c2ed',1,'DQN-Deepmind-NIPS-2013::GameEnv::GameEnv']]],
   ['rmsprop',['RMSProp',['../namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1Optimizers.html#a83bf1e32b34c7f7e9c7a8755969513ed',1,'DQN-Deepmind-NIPS-2013::dqn::Optimizers']]],

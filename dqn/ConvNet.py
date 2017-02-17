@@ -148,7 +148,7 @@ class Paddings(E.Enum):
 #   </tr>
 #   <tr>
 #       <td>InitMethod.uniform</td>
-#       <td>A tuple containing the upper and the lower boundaries</td>
+#       <td>A tuple containing the lower and the upper boundaries</td>
 #   </tr>
 #   <tr>
 #       <td>InitMethod.normal</td>

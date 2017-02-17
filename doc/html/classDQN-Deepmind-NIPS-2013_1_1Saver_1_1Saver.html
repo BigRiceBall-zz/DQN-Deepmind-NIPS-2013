@@ -132,6 +132,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a90f2e74db8a2b69b94959945ffb896f6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver.html#a90f2e74db8a2b69b94959945ffb896f6">loadNetwork</a> (self, agentId, networkId=None)</td></tr>
 <tr class="memdesc:a90f2e74db8a2b69b94959945ffb896f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The loadNetwork method returns the desired network.  <a href="#a90f2e74db8a2b69b94959945ffb896f6">More...</a><br /></td></tr>
 <tr class="separator:a90f2e74db8a2b69b94959945ffb896f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad377d9e28499a19a591d080e6a0df63"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver.html#aad377d9e28499a19a591d080e6a0df63">loadNetworkEpoch</a> (self, agentId, epoch)</td></tr>
+<tr class="memdesc:aad377d9e28499a19a591d080e6a0df63"><td class="mdescLeft">&#160;</td><td class="mdescRight">The loadNetworkEpoch returns the id of the network linked to the stat recorded for the given agent at the given epoch.  <a href="#aad377d9e28499a19a591d080e6a0df63">More...</a><br /></td></tr>
+<tr class="separator:aad377d9e28499a19a591d080e6a0df63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76d60329698faf415c4ed0dae362f53e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver.html#a76d60329698faf415c4ed0dae362f53e">loadDataset</a> (self, setId)</td></tr>
 <tr class="memdesc:a76d60329698faf415c4ed0dae362f53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The loadDataset method return the desired dataset.  <a href="#a76d60329698faf415c4ed0dae362f53e">More...</a><br /></td></tr>
 <tr class="separator:a76d60329698faf415c4ed0dae362f53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -407,6 +410,50 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The previously saved network </dd></dl>
+
+</div>
+</div>
+<a id="aad377d9e28499a19a591d080e6a0df63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad377d9e28499a19a591d080e6a0df63">&sect;&nbsp;</a></span>loadNetworkEpoch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def DQN-Deepmind-NIPS-2013.Saver.Saver.loadNetworkEpoch </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>agentId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>epoch</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The loadNetworkEpoch returns the id of the network linked to the stat recorded for the given agent at the given epoch. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">agentId</td><td>: The id of the agent that trained the network </td></tr>
+    <tr><td class="paramname">epoch</td><td>: The epoch when the stat was recorded</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The id of the network </dd></dl>
 
 </div>
 </div>

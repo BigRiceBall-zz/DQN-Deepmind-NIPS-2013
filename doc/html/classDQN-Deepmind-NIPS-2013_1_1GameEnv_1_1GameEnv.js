@@ -8,6 +8,7 @@ var classDQN_Deepmind_NIPS_2013_1_1GameEnv_1_1GameEnv =
     [ "legActions", "classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv.html#ab2efa70a8316abde73936602001654a6", null ],
     [ "minActions", "classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv.html#a76014d9140e479757a52b9ceda06dd16", null ],
     [ "resetGame", "classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv.html#afc780b83378b9d19d9dba64711e5c2ed", null ],
+    [ "saveFrame", "classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv.html#aed0bd85608c8373dd1ccfb27b9ae79bf", null ],
     [ "outSize", "classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv.html#ae8e7e56bd996ea0ce4ece1ca32f6b54a", null ],
     [ "screenSize", "classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv.html#a2dedb2f4e5f0f1b7da2970ac89a5b544", null ]
 ];

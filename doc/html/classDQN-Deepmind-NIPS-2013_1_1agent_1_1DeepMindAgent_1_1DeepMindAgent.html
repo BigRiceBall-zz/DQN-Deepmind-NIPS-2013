@@ -110,9 +110,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ea279d64a3b2bced6901c55df78c7e4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent.html#a9ea279d64a3b2bced6901c55df78c7e4">createNewAgent</a> (message, saver, plotter, env, name)</td></tr>
 <tr class="memdesc:a9ea279d64a3b2bced6901c55df78c7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The createNewAgent static method returns a new agent with the given name.  <a href="#a9ea279d64a3b2bced6901c55df78c7e4">More...</a><br /></td></tr>
 <tr class="separator:a9ea279d64a3b2bced6901c55df78c7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6271c469fb0446dd92a94ce447ba3695"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent.html#a6271c469fb0446dd92a94ce447ba3695">loadAgent</a> (message, saver, plotter, env, agentId)</td></tr>
-<tr class="memdesc:a6271c469fb0446dd92a94ce447ba3695"><td class="mdescLeft">&#160;</td><td class="mdescRight">The loadAgent static method returns an agent build from a previously saved agent using the last network saved by this agent.  <a href="#a6271c469fb0446dd92a94ce447ba3695">More...</a><br /></td></tr>
-<tr class="separator:a6271c469fb0446dd92a94ce447ba3695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada9bf3a5f6669e9fbde8d6527511685d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent.html#ada9bf3a5f6669e9fbde8d6527511685d">loadAgent</a> (message, saver, plotter, env, agentId, loadNet=-1)</td></tr>
+<tr class="memdesc:ada9bf3a5f6669e9fbde8d6527511685d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The loadAgent static method returns an agent build from a previously saved agent.  <a href="#ada9bf3a5f6669e9fbde8d6527511685d">More...</a><br /></td></tr>
+<tr class="separator:ada9bf3a5f6669e9fbde8d6527511685d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bbe0f1127879b400142d5cf6fea5384"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent.html#a8bbe0f1127879b400142d5cf6fea5384">__init__</a> (self, message, saver, plotter, env, agentId)</td></tr>
 <tr class="memdesc:a8bbe0f1127879b400142d5cf6fea5384"><td class="mdescLeft">&#160;</td><td class="mdescRight">The agent agent constructor.  <a href="#a8bbe0f1127879b400142d5cf6fea5384">More...</a><br /></td></tr>
 <tr class="separator:a8bbe0f1127879b400142d5cf6fea5384"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,6 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a63ce7439d1d1989c262489e08e04e204"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent.html#a63ce7439d1d1989c262489e08e04e204">loadNetwork</a> (self, networkId)</td></tr>
 <tr class="memdesc:a63ce7439d1d1989c262489e08e04e204"><td class="mdescLeft">&#160;</td><td class="mdescRight">The loadNetwork object load the network associated with the given id.  <a href="#a63ce7439d1d1989c262489e08e04e204">More...</a><br /></td></tr>
 <tr class="separator:a63ce7439d1d1989c262489e08e04e204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6fed7cfbd89dfe3e1d625842e9364de"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent.html#af6fed7cfbd89dfe3e1d625842e9364de">replay</a> (self, epoch, save=None)</td></tr>
+<tr class="memdesc:af6fed7cfbd89dfe3e1d625842e9364de"><td class="mdescLeft">&#160;</td><td class="mdescRight">The replay method makes the agent to replay the given epoch.  <a href="#af6fed7cfbd89dfe3e1d625842e9364de">More...</a><br /></td></tr>
+<tr class="separator:af6fed7cfbd89dfe3e1d625842e9364de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -258,8 +261,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6271c469fb0446dd92a94ce447ba3695"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6271c469fb0446dd92a94ce447ba3695">&sect;&nbsp;</a></span>loadAgent()</h2>
+<a id="ada9bf3a5f6669e9fbde8d6527511685d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada9bf3a5f6669e9fbde8d6527511685d">&sect;&nbsp;</a></span>loadAgent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,7 +295,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>agentId</em>&#160;</td>
+          <td class="paramname"><em>agentId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>loadNet</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -302,14 +311,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The loadAgent static method returns an agent build from a previously saved agent using the last network saved by this agent. </p>
+<p>The loadAgent static method returns an agent build from a previously saved agent. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">message</td><td>: The message object that the agent uses to communicate whith the main thread </td></tr>
     <tr><td class="paramname">saver</td><td>: The saver object that the agent uses to save itself </td></tr>
     <tr><td class="paramname">plotter</td><td>: The plotter object the agent can use to plot some datas </td></tr>
     <tr><td class="paramname">env</td><td>: The gameEnvironement the agent will use as input </td></tr>
-    <tr><td class="paramname">agentId</td><td>: The id of the agent to copy</td></tr>
+    <tr><td class="paramname">agentId</td><td>: The id of the agent to copy </td></tr>
+    <tr><td class="paramname">loadNet</td><td>: The id network to load. If negative (default), the last network is loaded. If None, no network is loaded</td></tr>
   </table>
   </dd>
 </dl>
@@ -370,6 +380,50 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The loadParams object load the parameters of the current agent saved in the saver object. </p>
+
+</div>
+</div>
+<a id="af6fed7cfbd89dfe3e1d625842e9364de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6fed7cfbd89dfe3e1d625842e9364de">&sect;&nbsp;</a></span>replay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def DQN-Deepmind-NIPS-2013.agent.DeepMindAgent.DeepMindAgent.replay </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>epoch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>save</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The replay method makes the agent to replay the given epoch. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">epoch</td><td>: The id of the epoch to replay as it has been recored by the saver </td></tr>
+    <tr><td class="paramname">save</td><td>: The path of the folder where to save frames or None to disable the recording. Default None </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A tuple which the first element is the total score and the second one the total reward </dd></dl>
 
 </div>
 </div>

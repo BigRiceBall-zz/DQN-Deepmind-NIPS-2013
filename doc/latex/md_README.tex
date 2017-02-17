@@ -1,14 +1,8 @@
-This project is an implementation of the deep Q network described by deepmind in \href{https://arxiv.org/abs/1312.5602}{\tt their article of 2013} using python 3.\+5 and Theano 
+This project is an implementation of the deep Q network described by deepmind in \href{https://arxiv.org/abs/1312.5602}{\tt their article of 2013} using python 3.\+5 and Theano
 
+~ \subsection*{Dependencies}
 
-
-\paragraph*{Dependencies}
-
-
-
-
-
-\subparagraph*{Main dependencies}
+\subsubsection*{Main dependencies}
 
 The following dependencies are crucial for this project and are used by the agent itself. The given version should be used. However, higher version would probaly work too
 \begin{DoxyItemize}
@@ -17,9 +11,9 @@ The following dependencies are crucial for this project and are used by the agen
 \item {\bfseries cv2}\+: The cv2 module is used to resize the images from A\+LE to feed the network used by the agent. The version used is the 3.\+1.\+0
 \end{DoxyItemize}
 
-\subparagraph*{Other dependencies}
+\subsubsection*{Other dependencies}
 
-These dependencies are used by
+These dependencies are used to save the agent, display the game or plot some statistics.
 \begin{DoxyItemize}
 \item {\bfseries Py\+Qt}\+: Py\+Qt version 4.\+8.\+7 is used to display the game and to build the window where the plots are displayed.
 \item {\bfseries pyqtgraph}\+: The plots and percentile plots are displayed thanks to pyqtgraph version 0.\+10.\+0.
@@ -28,25 +22,15 @@ These dependencies are used by
 \item {\bfseries Usual python modules}\+: collections, datetime, enum, gc, json, math, numbers, numpy, pickle, random, sys, time, threading
 \end{DoxyItemize}
 
+~ \subsection*{Usage}
 
+To start training the agent, simply type {\ttfamily python Run.\+py $<$rom file$>$}. This will create a new default agent, initilize it and start training it. A window will open displaying the game in the form it\textquotesingle{}s fed to the agent and another windows will show the evolution of the agent accross the epochs. To stop the process, type {\ttfamily stop} and every processes will terminate.
 
+The Atari 2600 R\+O\+Ms are available on the \href{http://www.atariage.com/system_items.html?SystemID=2600&ItemTypeID=ROM}{\tt Atari\+Age website}. After downloading the file you have to make sure it\textquotesingle{}s named as A\+LE expects it to be named otherwise, it can lead a segmentation fault. The names for each supported games can be found in the A\+LE sources, by inspecting the file related to your game in \href{https://github.com/mgbellemare/Arcade-Learning-Environment/tree/master/src/games/supported}{\tt /src/games/supported/}.
 
+~ \subsection*{Results}
 
-\paragraph*{Usage}
-
-
-
- To start training the agent, simply type {\ttfamily python Run.\+py $<$rom file$>$} This will create a new default agent, initilize it and start training it. A window will open displaying the game in the form it\textquotesingle{}s feeded to the agent and another windows will show the evolution of the agent accross the epochs. To stop the process, type {\ttfamily stop} and every processes will terminate.
-
-The Atari 2600 R\+O\+Ms are available on the \href{http://www.atariage.com/system_items.html?SystemID=2600&ItemTypeID=ROM}{\tt Atari\+Age website}. After downloading the file you have to make sure its named as A\+LE expects it to be named otherwise, it can lead a segmentation fault. The names for each supported games can be found in the A\+LE sources, by inspecting the file related to your game in \href{https://github.com/mgbellemare/Arcade-Learning-Environment/tree/master/src/games/supported}{\tt /src/games/supported/}. 
-
-
-
-\paragraph*{Results}
-
-
-
- The agent is trained as explained in the \href{https://arxiv.org/abs/1312.5602}{\tt deepmind paper}.
+The agent is trained as explained in the \href{https://arxiv.org/abs/1312.5602}{\tt deepmind paper}.
 
 Before training, a test set is built by picking random samples from games played randomly. By default, one epoch lasts 50000 iterations and every epoch, the agent plays for 10000 iterations using an epsilon greedy strategy with epsilon equal to 0.\+05. Every epoch, the following results are plotted and stored\+:
 \begin{DoxyItemize}
@@ -56,17 +40,15 @@ Before training, a test set is built by picking random samples from games played
 \item The average reward per games played (as in the Deepmind\textquotesingle{}s paper, the reward are clipped between -\/1 and 1)
 \end{DoxyItemize}
 
-These results are stored in an sqlite database. \href{https://github.com/sqlitebrowser/sqlitebrowser}{\tt DB Browser for S\+Q\+Lite} provides an easy way to display and plot those results one ce the program stopped.
+These results are stored in an sqlite database. \href{https://github.com/sqlitebrowser/sqlitebrowser}{\tt DB Browser for S\+Q\+Lite} provides an easy way to display and plot those results.
 
-While I didn\textquotesingle{}t observe the same evolution of the output of the Q function as deepmind, I got similar results for the average scores. 
+While I didn\textquotesingle{}t observe the same evolution of the output of the Q function as deepmind, I got similar results for the average score.
 
+Have a look at the result folder for a analysis of the project.
 
+~ \subsection*{References}
 
-\paragraph*{References}
-
-
-
- \mbox{[}1\mbox{]} \href{https://arxiv.org/abs/1312.5602}{\tt Playing Atari with Deep Reinforcement Learning}
+\mbox{[}1\mbox{]} \href{https://arxiv.org/abs/1312.5602}{\tt Playing Atari with Deep Reinforcement Learning}
 
 \mbox{[}2\mbox{]} \href{https://github.com/mgbellemare/Arcade-Learning-Environment/blob/master/doc/manual/manual.pdf}{\tt Arcade Learning Environlent Technical Manual}
 

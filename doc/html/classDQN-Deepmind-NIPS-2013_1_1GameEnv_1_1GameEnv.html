@@ -123,6 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ccc35e029e05910c3c25ffa602e442b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv.html#a1ccc35e029e05910c3c25ffa602e442b">gameOver</a> (self)</td></tr>
 <tr class="memdesc:a1ccc35e029e05910c3c25ffa602e442b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The gameOver methods return whether or not the game ended.  <a href="#a1ccc35e029e05910c3c25ffa602e442b">More...</a><br /></td></tr>
 <tr class="separator:a1ccc35e029e05910c3c25ffa602e442b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed0bd85608c8373dd1ccfb27b9ae79bf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv.html#aed0bd85608c8373dd1ccfb27b9ae79bf">saveFrame</a> (self, folder, filename=None)</td></tr>
+<tr class="memdesc:aed0bd85608c8373dd1ccfb27b9ae79bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The saveFrame method saves the current frame as a PNG file in the given folder.  <a href="#aed0bd85608c8373dd1ccfb27b9ae79bf">More...</a><br /></td></tr>
+<tr class="separator:aed0bd85608c8373dd1ccfb27b9ae79bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -333,6 +336,51 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The resetGame method reset the game. </p>
+
+</div>
+</div>
+<a id="aed0bd85608c8373dd1ccfb27b9ae79bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0bd85608c8373dd1ccfb27b9ae79bf">&sect;&nbsp;</a></span>saveFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def DQN-Deepmind-NIPS-2013.GameEnv.GameEnv.saveFrame </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>folder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>filename</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The saveFrame method saves the current frame as a PNG file in the given folder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">folder</td><td>: Path the the folder where to save the frame </td></tr>
+    <tr><td class="paramname">filename</td><td>: Name of the file to create. If "filename" doesn't end with ".PNG" or ".png", ".png" is appended. If filename is None (default), the created file follow the following pattern: "creation date of this 
+                    object"_frame_"frame number since the begining of 
+                    the episode".png </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

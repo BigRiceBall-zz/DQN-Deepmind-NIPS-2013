@@ -1,6 +1,7 @@
 var searchData=
 [
   ['saveagent',['saveAgent',['../classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver.html#aa0d2a62b7e514dc527745f846924e70e',1,'DQN-Deepmind-NIPS-2013::Saver::Saver']]],
+  ['saveframe',['saveFrame',['../classDQN-Deepmind-NIPS-2013_1_1GameEnv_1_1GameEnv.html#aed0bd85608c8373dd1ccfb27b9ae79bf',1,'DQN-Deepmind-NIPS-2013::GameEnv::GameEnv']]],
   ['savenetwork',['saveNetwork',['../classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver.html#aebf1fa14b77298919410191ecbab6fe5',1,'DQN-Deepmind-NIPS-2013::Saver::Saver']]],
   ['saver',['Saver',['../classDQN-Deepmind-NIPS-2013_1_1Saver_1_1Saver.html',1,'DQN-Deepmind-NIPS-2013::Saver']]],
   ['saver_2epy',['Saver.py',['../Saver_8py.html',1,'']]],

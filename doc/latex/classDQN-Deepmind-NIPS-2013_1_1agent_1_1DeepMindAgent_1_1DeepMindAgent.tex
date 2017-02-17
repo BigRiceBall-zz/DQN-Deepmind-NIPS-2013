@@ -16,14 +16,16 @@ Inheritance diagram for D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013.agent.\+Deep\
 \item 
 def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a9ea279d64a3b2bced6901c55df78c7e4}{create\+New\+Agent} (message, saver, plotter, env, name)
 \begin{DoxyCompactList}\small\item\em The create\+New\+Agent static method returns a new agent with the given name. \end{DoxyCompactList}\item 
-def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a6271c469fb0446dd92a94ce447ba3695}{load\+Agent} (message, saver, plotter, env, agent\+Id)
-\begin{DoxyCompactList}\small\item\em The load\+Agent static method returns an agent build from a previously saved agent using the last network saved by this agent. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_ada9bf3a5f6669e9fbde8d6527511685d}{load\+Agent} (message, saver, plotter, env, agent\+Id, load\+Net=-\/1)
+\begin{DoxyCompactList}\small\item\em The load\+Agent static method returns an agent build from a previously saved agent. \end{DoxyCompactList}\item 
 def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a8bbe0f1127879b400142d5cf6fea5384}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, message, saver, plotter, env, agent\+Id)
 \begin{DoxyCompactList}\small\item\em The agent agent constructor. \end{DoxyCompactList}\item 
 def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_ae3b30ec9438fbaa91c440415e43844fe}{load\+Params} (self)
 \begin{DoxyCompactList}\small\item\em The load\+Params object load the parameters of the current agent saved in the saver object. \end{DoxyCompactList}\item 
 def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a63ce7439d1d1989c262489e08e04e204}{load\+Network} (self, network\+Id)
-\begin{DoxyCompactList}\small\item\em The load\+Network object load the network associated with the given id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The load\+Network object load the network associated with the given id. \end{DoxyCompactList}\item 
+def \hyperlink{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_af6fed7cfbd89dfe3e1d625842e9364de}{replay} (self, epoch, save=None)
+\begin{DoxyCompactList}\small\item\em The replay method makes the agent to replay the given epoch. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -94,15 +96,15 @@ The create\+New\+Agent static method returns a new agent with the given name.
 \begin{DoxyReturn}{Returns}
 A new agent that\textquotesingle{}s saved in the saver object 
 \end{DoxyReturn}
-\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a6271c469fb0446dd92a94ce447ba3695}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_a6271c469fb0446dd92a94ce447ba3695} 
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_ada9bf3a5f6669e9fbde8d6527511685d}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_ada9bf3a5f6669e9fbde8d6527511685d} 
 \index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}!load\+Agent@{load\+Agent}}
 \index{load\+Agent@{load\+Agent}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}}
 \subsubsection{\texorpdfstring{load\+Agent()}{loadAgent()}}
-{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent.\+load\+Agent (\begin{DoxyParamCaption}\item[{}]{message,  }\item[{}]{saver,  }\item[{}]{plotter,  }\item[{}]{env,  }\item[{}]{agent\+Id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent.\+load\+Agent (\begin{DoxyParamCaption}\item[{}]{message,  }\item[{}]{saver,  }\item[{}]{plotter,  }\item[{}]{env,  }\item[{}]{agent\+Id,  }\item[{}]{load\+Net = {\ttfamily -\/1} }\end{DoxyParamCaption})}
 
 
 
-The load\+Agent static method returns an agent build from a previously saved agent using the last network saved by this agent. 
+The load\+Agent static method returns an agent build from a previously saved agent. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -114,7 +116,9 @@ The load\+Agent static method returns an agent build from a previously saved age
 \hline
 {\em env} & \+: The game\+Environement the agent will use as input \\
 \hline
-{\em agent\+Id} & \+: The id of the agent to copy\\
+{\em agent\+Id} & \+: The id of the agent to copy \\
+\hline
+{\em load\+Net} & \+: The id network to load. If negative (default), the last network is loaded. If None, no network is loaded\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -145,6 +149,26 @@ The load\+Network object load the network associated with the given id.
 
 The load\+Params object load the parameters of the current agent saved in the saver object. 
 
+\hypertarget{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_af6fed7cfbd89dfe3e1d625842e9364de}{}\label{classDQN-Deepmind-NIPS-2013_1_1agent_1_1DeepMindAgent_1_1DeepMindAgent_af6fed7cfbd89dfe3e1d625842e9364de} 
+\index{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}!replay@{replay}}
+\index{replay@{replay}!D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent@{D\+Q\+N-\/\+Deepmind-\/\+N\+I\+P\+S-\/2013\+::agent\+::\+Deep\+Mind\+Agent\+::\+Deep\+Mind\+Agent}}
+\subsubsection{\texorpdfstring{replay()}{replay()}}
+{\footnotesize\ttfamily def D\+QN-\/Deepmind-\/N\+I\+PS-\/2013.agent.\+Deep\+Mind\+Agent.\+Deep\+Mind\+Agent.\+replay (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{epoch,  }\item[{}]{save = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+The replay method makes the agent to replay the given epoch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em epoch} & \+: The id of the epoch to replay as it has been recored by the saver \\
+\hline
+{\em save} & \+: The path of the folder where to save frames or None to disable the recording. Default None \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tuple which the first element is the total score and the second one the total reward 
+\end{DoxyReturn}
 
 
 \subsection{Member Data Documentation}

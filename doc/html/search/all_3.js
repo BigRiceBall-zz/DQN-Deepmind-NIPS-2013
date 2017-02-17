@@ -14,7 +14,6 @@ var searchData=
   ['drawscreen',['drawScreen',['../classDQN-Deepmind-NIPS-2013_1_1EnvDisplay_1_1Canvas.html#a6225ff0fed4f12c11640877f04286c91',1,'DQN-Deepmind-NIPS-2013::EnvDisplay::Canvas']]],
   ['envdisplay',['EnvDisplay',['../namespaceDQN-Deepmind-NIPS-2013_1_1EnvDisplay.html',1,'DQN-Deepmind-NIPS-2013']]],
   ['gameenv',['GameEnv',['../namespaceDQN-Deepmind-NIPS-2013_1_1GameEnv.html',1,'DQN-Deepmind-NIPS-2013']]],
-  ['dqn_2ddeepmind_2dnips_2d2013',['DQN-Deepmind-NIPS-2013',['../md_README.html',1,'']]],
   ['message',['Message',['../namespaceDQN-Deepmind-NIPS-2013_1_1Message.html',1,'DQN-Deepmind-NIPS-2013']]],
   ['optimizers',['Optimizers',['../namespaceDQN-Deepmind-NIPS-2013_1_1dqn_1_1Optimizers.html',1,'DQN-Deepmind-NIPS-2013::dqn']]],
   ['plotter',['Plotter',['../namespaceDQN-Deepmind-NIPS-2013_1_1Plotter.html',1,'DQN-Deepmind-NIPS-2013']]],

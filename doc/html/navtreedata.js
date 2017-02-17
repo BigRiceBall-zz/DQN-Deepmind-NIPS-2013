@@ -1,7 +1,6 @@
 var NAVTREE =
 [
   [ "DQN-Deepmind-NIPS-2013", "index.html", [
-    [ "DQN-Deepmind-NIPS-2013", "md_README.html", null ],
     [ "Packages", null, [
       [ "Packages", "namespaces.html", "namespaces" ],
       [ "Package Functions", "namespacemembers.html", [
