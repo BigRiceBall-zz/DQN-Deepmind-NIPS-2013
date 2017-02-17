@@ -1,0 +1,210 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{sansmath}
+\usepackage{ifthen}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat = 1.13}
+\makeatletter
+\pgfplotsset
+{
+  /tikz/max node/.style = {anchor=south},
+  mark max/.style =
+  {
+    point meta rel                 = per plot,
+    visualization depends on       = {x \as \xvalue},
+    scatter/@pre marker code/.code = {%
+      \ifx\pgfplotspointmeta\pgfplots@metamax
+        \def\markopts{}%
+        \coordinate (maximum);
+          \node[#1] {(\pgfmathprintnumber[fixed]{\xvalue},    
+                      \pgfmathprintnumber[fixed]{\pgfplotspointmeta})};%
+      \else
+        \def\markopts{mark=none}
+      \fi
+      \expandafter\scope\expandafter[\markopts]
+    },%
+    scatter/@post marker code/.code = {\endscope},
+    scatter
+  },
+  mark max/.default={above}
+}
+\makeatother
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{shadows}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{shapes.geometric}
+
+\usepackage[T1]{fontenc}
+\usepackage{cmbright}
+\usepackage[default]{raleway}
+\SetSymbolFont{largesymbols}{normal}{OMX}{iwona}{m}{n}
+
+\begin{document}
+ 
+  %%-------------------------------------------------------------------------%%
+  %% Plot the data collected while learning and the trend                    %%
+  %%-------------------------------------------------------------------------%%
+  \pgfplotstableread[header  = false, 
+                     col sep = space]{rawdataList}{\rawdataList}
+  \pgfplotstablegetrowsof{\rawdataList}
+  \pgfmathsetmacro{\rows}{\pgfplotsretval - 1}
+
+  \foreach \line in {0, ..., \rows}
+  {
+    \pgfplotstablegetelem{\line}{[index] 0}\of{\rawdataList}
+    \let\raw\pgfplotsretval
+    \pgfplotstablegetelem{\line}{[index] 1}\of{\rawdataList}
+    \let\trends\pgfplotsretval
+    \pgfplotstablegetelem{\line}{[index] 2}\of{\rawdataList}
+    \let\xScl\pgfplotsretval
+    \pgfplotstablegetelem{\line}{[index] 3}\of{\rawdataList}
+    \let\yScl\pgfplotsretval
+       
+    \begin{tikzpicture}
+   
+      \begin{axis}[xlabel           = Epoch,
+                   ylabel           = Score,
+                   x                = \xScl,
+                   y                = \yScl,
+                   xmin             = 0,
+                   ymin             = 0,
+                   minor y tick num = 1,
+                   axis x line      = bottom,
+                   axis y line      = left,
+                   grid             = major,
+                   grid style       = {very thin, draw = gray!20},
+                   enlargelimits    = {0.05, upper},
+                   legend entries   = {Plot,Trend},
+                   legend pos       = {north west}]
+   
+        \addplot[gray!50, thick, 
+                 mark max = {left, text = black!75}] 
+                table[col sep=comma] {\raw};
+        \addplot[orange, very thick] table[col sep=comma] {\trends};
+      \end{axis}
+    \end{tikzpicture}
+  }
+  
+  %%-------------------------------------------------------------------------%%
+  %% Plot the trends on one chart to compare the results                     %%
+  %%-------------------------------------------------------------------------%%
+  \pgfplotstableread[header = false, col sep = space]{cmpList}{\cmpList}
+  \pgfplotstablegetrowsof{\cmpList}
+  \pgfmathsetmacro{\rows}{\pgfplotsretval - 1}
+  
+  \pgfplotstablegetcolsof{\cmpList}
+  \pgfmathsetmacro{\cols}{\pgfplotsretval - 1}
+  
+  \foreach \line in {0, ..., \rows}
+  {
+    \pgfplotstablegetelem{\line}{[index] 1}\of{\cmpList}
+    \let\xScl\pgfplotsretval
+    \pgfplotstablegetelem{\line}{[index] 2}\of{\cmpList}
+    \let\yScl\pgfplotsretval
+        
+    \begin{tikzpicture}
+   
+      \begin{axis}[xlabel           = Epoch,
+                   ylabel           = Score,
+                   x                = \xScl,
+                   y                = \yScl,
+                   xmin             = 0,
+                   ymin             = 0,
+                   minor y tick num = 1,
+                   axis x line      = bottom,
+                   axis y line      = left,
+                   grid             = major,
+                   grid style       = {very thin, draw = gray!20},
+                   enlargelimits    = {0.05, upper},
+                   legend pos       = {north west}]
+                   
+        \foreach \plt in {3,6,...,\cols}
+        {
+          \pgfmathsetmacro{\pltNameCol} {\plt + 1}
+          \pgfmathsetmacro{\pltColorCol}{\plt + 2}
+          
+          \pgfplotstablegetelem{\line}{[index] \plt}\of{\cmpList}
+          \let\pltFile\pgfplotsretval
+          \pgfplotstablegetelem{\line}{[index] \pltNameCol}\of{\cmpList}
+          \let\pltName\pgfplotsretval
+          \pgfplotstablegetelem{\line}{[index] \pltColorCol}\of{\cmpList}
+          \let\pltColor\pgfplotsretval
+            
+          \edef \tmp
+          {
+            \noexpand\addplot[very thick, \pltColor]
+                     table[col sep = comma] {\pltFile};
+            
+            \noexpand\addlegendentry{\pltName}
+          }
+          \tmp
+        }
+
+      \end{axis}
+    \end{tikzpicture}
+  }
+
+  %%-------------------------------------------------------------------------%%
+  %% Plot the distributions of the results                                   %%
+  %%-------------------------------------------------------------------------%%
+  \pgfplotstableread[header = false, col sep = space]{distrList}{\distrList}
+  \pgfplotstablegetrowsof{\distrList}
+  \pgfmathsetmacro{\rows}{\pgfplotsretval - 1}
+  
+  \foreach \line in {0, ..., \rows}
+  {
+    \pgfplotstablegetelem{\line}{[index] 1}\of{\distrList}
+    \let\distrFile\pgfplotsretval
+    \pgfplotstablegetelem{\line}{[index] 2}\of{\distrList}
+    \let\distrColor\pgfplotsretval
+    \pgfplotstablegetelem{\line}{[index] 3}\of{\distrList}
+    \let\distrMean\pgfplotsretval
+    \pgfplotstablegetelem{\line}{[index] 4}\of{\distrList}
+    \let\distrBucketSize\pgfplotsretval
+    \pgfplotstablegetelem{\line}{[index] 5}\of{\distrList}
+    \let\distrMax\pgfplotsretval
+    \pgfplotstablegetelem{\line}{[index] 6}\of{\distrList}
+    \let\distrName\pgfplotsretval
+
+    \pgfplotstableread[header = false, col sep = comma]{\distrFile}\datatable
+    
+    \pgfmathsetmacro{\avg}{floor(\distrMean / \distrBucketSize)}
+
+    \begin{tikzpicture}
+   
+      \begin{axis}[bar width              = 15pt,
+                   x                      = 17,
+                   y                      = 1.2,
+                   xlabel                 = Score,
+                   ylabel                 = Samples,
+                   xtick                  = data,
+                   xticklabels from table = {\datatable}{0},
+                   x tick label style     = {rotate = 75, anchor = east},
+                   axis x line            = bottom,
+                   axis y line            = left,
+                   grid                   = major,
+                   grid style             = {very thin, draw = gray!20},
+                   enlargelimits          = {0.05, upper},
+                   legend pos             = {north east},
+                   legend entries         = {Scores (\distrName),Mean score}]
+ 
+        \addplot[ybar,
+                 draw = \distrColor, 
+                 fill = \distrColor!40] 
+                 table[x expr = \coordindex] {\datatable};
+        \addplot[orange!50!yellow, mark = none, very thick] 
+                coordinates {(\avg, 0) (\avg, \distrMax)};
+
+      \end{axis}
+    \end{tikzpicture}
+  }
+  
+\end{document}

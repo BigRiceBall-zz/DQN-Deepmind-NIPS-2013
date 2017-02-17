@@ -1,0 +1,268 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{sansmath}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{shadows}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{shapes.geometric}
+
+\usepackage[T1]{fontenc}
+\usepackage{cmbright}
+\usepackage[default]{raleway}
+\SetSymbolFont{largesymbols}{normal}{OMX}{iwona}{m}{n}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{grey}     {rgb}{ 0.557 , 0.557 , 0.557 }
+\definecolor{line0}    {rgb}{ 0.442 , 0.442 , 0.442 }
+\definecolor{line1}    {rgb}{ 0.476 , 0.476 , 0.476 }
+\definecolor{line2}    {rgb}{ 0.615 , 0.615 , 0.615 }
+\definecolor{line3}    {rgb}{ 0.334 , 0.334 , 0.334 }
+\definecolor{line4}    {rgb}{ 0.469 , 0.469 , 0.469 }
+\definecolor{line5}    {rgb}{ 0.341 , 0.341 , 0.341 }
+\definecolor{filterBg} {rgb}{ 0.850 , 0.850 , 0.950 }
+\definecolor{gridColor}{rgb}{ 0.750 , 0.600 , 1     }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tikzset
+{
+  double arrow/.style args={#1 colored by #2 and #3}{
+    -stealth, line width=#1, #2, % first arrow
+    postaction={draw,-stealth,#3,line width=(#1)/1.5,
+                shorten <=(#1)/5,shorten >=2*(#1)/5}, % second arrow
+  }
+}
+
+\newcommand{\game}
+{ 
+  \fill[black] (0,0)            rectangle ++(8.4,8.4);
+  \fill[line0] (0,4)            rectangle ++(8.4,0.2  );
+  \fill[line1] (0,4) ++ (0,0.2) rectangle ++(8.4,0.2  );
+  \fill[line2] (0,4) ++ (0,0.4) rectangle ++(8.4,0.2  );
+  \fill[line3] (0,4) ++ (0,0.6) rectangle ++(8.4,0.2  );
+  \fill[line4] (0,4) ++ (0,0.8) rectangle ++(8.4,0.2  );
+  \fill[line5] (0,4) ++ (0,1.0) rectangle ++(8.4,0.2  );
+  
+  \fill[line5] (5,3)   rectangle ++(0.1,0.1);
+  \fill[line5] (3,0.5) rectangle ++(0.8,0.1);
+  
+  \fill[gray]
+    (0,0.5) -- ++(0.5,0) -- ++( 0  ,6) -- ++(7.4,0) -- ++(0,-6) -- ++(0.5,0)
+            -- ++(0,6.5) -- ++(-8.4,0) -- cycle;
+            
+  \fill[gray] (3,7.3)           rectangle ++(0.6,0.7);
+  \fill[gray] (3,7.3) ++(0.8,0) rectangle ++(0.6,0.7);
+  \fill[gray] (3,7.3) ++(1.6,0) rectangle ++(0.6,0.7);
+  \fill[gray] (3,7.3) ++(4  ,0) rectangle ++(0.6,0.7);
+
+  \draw[white] (0,0) rectangle ++(8.4,8.4);
+}
+
+\newcommand{\networkInput}
+{
+  \begin{scope}[shift={(1.5,1)}]
+    \begin{scope}[shift={(1.5,1)}]
+      \begin{scope}[shift={(1.5,1)}]
+        \game
+      \end{scope}
+      \game
+    \end{scope}
+    
+    \game
+  \end{scope}
+  
+  \game
+  
+  \draw[<->] (0,0  ) ++ (-0.25, 0   ) -- ++(0,8.4)
+             node[midway, anchor=east]  {84px};
+  \draw[<->] (0,0  ) ++ ( 0,   -0.25) -- ++(8.4,0)
+             node[midway, anchor=north] {84px};
+  \draw[<->] (0,8.4) ++ (-0.25, 0.25) -- ++(4.5,3) 
+             node[midway, above, sloped] {4 frames};
+  
+  \node[anchor = south] at (6.45, 11.6) {Input datas};
+}
+
+\newcommand{\convLayer}[4]
+{
+  \filldraw[layerBox] (  3,  1) node (A1){} -- 
+                    ++( 16,  0) node (A2){} --
+                    ++(  0, 11) node (A3){} -- 
+                    ++(-16,  0) node (A4){} -- cycle;
+  
+  \fill[filter]                                 (6  , 4) rectangle ++ (5, 5);
+  \draw[filterGrid, step=5/#1, shift={(6,4)}]   (0  , 0) grid      ++ (5, 5);
+  \draw[filterBorder]                           (6  , 4) rectangle ++ (5, 5);
+  
+  \fill[filter]                                 (4.5, 3) rectangle ++ (5, 5);
+  \draw[filterGrid, step=5/#1, shift={(4.5,3)}] (0  , 0) grid      ++ (5, 5);
+  \draw[filterBorder]                           (4.5, 3) rectangle ++ (5, 5);
+  
+  \fill[filter]                                 (0  , 0) rectangle ++ (5, 5);
+  \draw[filterGrid, step=5/#1]                  (0  , 0) grid      ++ (5, 5);
+  \draw[filterBorder]                           (0  , 0) rectangle ++ (5, 5);
+
+  \draw[opacity = 0] (2.5, 2.5) -- (8.5, 6.5)
+                     node[opacity = 1, midway, sloped] {. . .};
+                     
+  \draw[<->] (0,0) ++ (-0.25, 0   ) -- ++(0,5)
+             node[midway, anchor=east]  {#1};
+  \draw[<->] (0,0) ++ ( 0,   -0.25) -- ++(5,0)
+             node[midway, anchor=north] {#1};
+  \draw[<->] (0,5) ++ (-0.25, 0.25) -- ++(6,4) 
+             node[midway, above, sloped] {#2 filters};
+             
+  \node at (7, 0.75) {Stride = #3x#3};
+  
+  \draw[lnk] (11  , 6.5) -- ++(3, 0) node[actFnct, ball color=grey](f3){ReLU};
+  \draw[lnk] ( 9.5, 5.5) -- ++(3, 0) node[actFnct, font=\huge\bf]  (f2){ReLU};
+  \draw[lnk] ( 5  , 2.5) -- ++(3, 0) node[actFnct, font=\Huge\bf]  (f1){ReLU};
+  
+  \draw[grp] (f3.east) -- ++(3, -1) node (out) {};
+  \draw[grp] (f2.east) -- (out.center);
+  \draw[grp] (f1.east) -- (out.center);
+  
+  \filldraw[layerBox] (- 3,- 3) node (B1){} -- 
+                    ++( 16,  0) node (B2){} --
+                    ++(  0, 11) node (B3){} -- 
+                    ++(-16,  0) node (B4){} -- cycle;
+                                        
+   \draw [layerBox]
+         ($(B2.center) + (-1, 0)$) -- (B2.center)[rounded corners = 1mm] --
+         ($(B2.center) + (40:1)$)[layerBox] --
+         (A2.center) -- (A3.center) -- (A4.center) --
+         (B4.center)[sharp corners] -- ($(B4.center) + (0, -1)$)
+         arc (180:90:1)[layerBox] -- (B3.center)[sharp corners] -- 
+         ($(B2.center) + (0, 1)$) arc (0:-90:1) --cycle;
+         
+    \node at (8.5, 10.5) {#4: convolutional layer};
+}
+
+\newcommand{\fcLayer}[3]
+{
+   \filldraw[layerBox] (  3  , 1) node (A1){} -- 
+                     ++( 13.5, 0) node (A2){} --
+                     ++(  0  , 6) node (A3){} -- 
+                     ++(-13.5, 0) node (A4){} -- cycle;
+  
+  \node[sum] (S3) at (6  , 4)
+             {$\displaystyle‎‎\mathbold{\sum_i w_{i,j} x_i + b_j}$};
+  \node[sum] (S2) at (4.5, 3)
+             {\huge$\displaystyle\mathbold{\sum_i w_{i,j} x_i + b_j}$};
+  \node[sum] (S1) at (0  , 0)
+             {\Huge$\displaystyle\mathbold{\sum_i w_{i,j} x_i + b_j}$};
+  
+  \draw[opacity = 0] (S1.north east |- S1.shape center) --
+                     (S3.north east |- S3.shape center)
+                     node[opacity = 1, midway, sloped] {. . .};
+
+  \draw[<->] ($(S1.after bottom) + (-0.25,0.25)$) --
+             ($(S3.after bottom) + (-0.25,0.25)$)
+             node[midway, above, sloped] {#1 units};
+             
+   \draw[lnk] (S3.before top |- S3.east) -- ++(3, 0)
+              node[actFnct, ball color=grey](f3){#2};
+   \draw[lnk] (S2.before top |- S2.east) -- ++(3, 0)
+              node[actFnct, font=\huge\bf]  (f2){#2};
+   \draw[lnk] (S1.before top |- S1.east) -- ++(3, 0)
+              node[actFnct, font=\Huge\bf]  (f1){#2};
+   
+   \draw[grp] (f3.east) -- ++(3, -1) node (out) {};
+   \draw[grp] (f2.east) -- (out.center);
+   \draw[grp] (f1.east) -- (out.center);
+   
+   \filldraw[layerBox] (- 4.5,- 3) node (B1){} -- 
+                     ++( 15  ,  0) node (B2){} --
+                     ++(  0  ,  6) node (B3){} -- 
+                     ++(-15  ,  0) node (B4){} -- cycle;
+                                         
+    \draw [layerBox]
+          ($(B2.center) + (-1, 0)$) -- (B2.center)[rounded corners = 1mm] --
+          ($(B2.center) + (40:1)$)[layerBox] --
+          (A2.center) -- (A3.center) -- (A4.center) --
+          (B4.center)[sharp corners] -- ($(B4.center) + (0, -1)$)
+          arc (180:90:1)[layerBox] -- (B3.center)[sharp corners] -- 
+          ($(B2.center) + (0, 1)$) arc (0:-90:1) --cycle;
+          
+     \node at (8.5, 6.5) {#3: Fully connected layer};
+}
+
+\begin{document}
+  
+  \begin{tikzpicture}[> = Stealth, line width = 0.75pt,font=\LARGE\bf,
+                      filter/.style       = {fill       = filterBg},
+                      filterGrid/.style   = {thin, dashed,
+                                             draw       = gridColor},
+                      filterBorder/.style = {draw       = black,
+                                             line width = 2pt},
+                      grp/.style          = {line width = 7.5pt},
+                      lnk/.style          = {double arrow = 7.5pt
+                                             colored by white and black},
+                      actFnct/.style      = {circle, 
+                                             line width = 1pt,
+                                             shading    = ball,
+                                             ball color = grey!50!white,
+                                             draw       = black,
+                                             text       = black,
+                                             anchor     = west},
+                      layerBox/.style     = {draw            = blue!40!white,
+                                             fill            = blue!20!white,
+                                             draw opacity    = 0.55,
+                                             fill opacity    = 0.35,
+                                             rounded corners = 10mm},
+                      sum/.style          = {cylinder,
+                                             cylinder uses custom fill,
+                                             line width         = 1pt,
+                                             draw               = black,
+                                             cylinder body fill = grey!60,
+                                             cylinder end fill  = grey!80,
+                                             text               = black,
+                                             aspect             = 0.25,
+                                             inner sep          = 5mm}]
+    
+    \networkInput
+    
+    \draw[double arrow=5mm colored by white and black]
+        (10.5,6) -- ++(6,0);
+    
+    \begin{scope}[xshift = 480, yshift = 20]
+      \convLayer{8}{16}{4}{L1}
+    \end{scope}
+    
+    \draw[double arrow=5mm colored by white and black] (out.center) -- ++(6,0)
+         node[midway, above, text = black] {16 channels};
+         
+    \begin{scope}[xshift = 1125, yshift = 20]
+      \convLayer{4}{34}{2}{L2}
+    \end{scope}
+    
+    \draw[double arrow=5mm colored by white and black, rounded corners = 50mm]
+         (out.center) -- ++ (5,0) node[midway, above, text = black]{34 channels}
+                      -- ++ (0,-10)[rounded corners = 35mm] -- ++ (-61, 0)
+                      -- ++ (0,-7) -- ++ (6,0);
+         
+    
+    \begin{scope}[xshift = 250, yshift = -380]
+      \fcLayer{256}{ReLU}{L3}
+    \end{scope}
+    
+    \draw[double arrow=5mm colored by white and black] (out.center) -- ++(6,0)
+         node[midway, above, text = black] {256 channels};
+    
+    \begin{scope}[xshift = 900, yshift = -380]
+      \fcLayer{Act.}{Ident.}{L4}
+    \end{scope}
+    
+    \draw[double arrow=5mm colored by white and black] (out.center) -- ++(6,0)
+         node[midway, above, text = black] {Output};
+         
+  \end{tikzpicture}
+  
+\end{document}

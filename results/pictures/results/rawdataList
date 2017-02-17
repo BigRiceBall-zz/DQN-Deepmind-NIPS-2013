@@ -1,0 +1,4 @@
+../../datas/DeepMind.csv             ../../datas/DeepMind_Trends.csv             4   1   00_ref
+../../datas/Test01_score_Xavier.csv  ../../datas/Test01_score_Xavier_Trends.csv  2.5 1.5 01_xav
+../../datas/Test01_score_Normal.csv  ../../datas/Test01_score_Normal_Trends.csv  2.5 1.5 01_nor
+../../datas/Test01_score_Uniform.csv ../../datas/Test01_score_Uniform_Trends.csv 2.5 1.5 01_uni

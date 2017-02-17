@@ -1,0 +1,3 @@
+01_xav_distr ../../datas/Test01_AVG_Score_Xavier_Distr_BS10.csv  blue  118.007 10 109 Xavier
+01_nor_distr ../../datas/Test01_AVG_Score_Normal_Distr_BS10.csv  green  73.913 10 209 Normal
+01_uni_distr ../../datas/Test01_AVG_Score_Uniform_Distr_BS10.csv red    54.899 10 206 Uniform

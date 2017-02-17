@@ -1,0 +1,1 @@
+01_cmp 4 2 ../../datas/DeepMind_Trends.csv Deepmind orange ../../datas/Test01_score_Xavier_Trends.csv Xavier blue ../../datas/Test01_score_Normal_Trends.csv Normal green ../../datas/Test01_score_Uniform_Trends.csv Uniform red
