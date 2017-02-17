@@ -100,7 +100,7 @@ def clipByNorm(grads, ts):
        
     clip  = Th.shared(np.array([ts, 0], dtype = np.float32))
     right = Th.shared(np.array([0 , 1], dtype = np.float32))
-    n     = Th.shared(np.array(0     , dtype = np.float32))
+    n     = Th.shared(np.array(0      , dtype = np.float32))
     
     for g in grads:
         n = n + (g ** 2).sum()
