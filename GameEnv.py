@@ -1,3 +1,5 @@
+import re
+import os
 import time
 import cv2
 import numpy                as np
@@ -31,6 +33,13 @@ class GameEnv:
         self._RAWScreen = np.empty([d[0] * d[1]]  , dtype = np.uint8)
         self._RAWScaled = np.empty(self.outSize   , dtype = np.uint8)
         self._RGBScreen = np.empty([d[1], d[0], 3], dtype = np.uint8)
+        
+        t               = time.localtime()
+        self._creaTime  = str(t.tm_year) + "-" + str(t.tm_mon)  + \
+                                           "-" + str(t.tm_mday) + \
+                                           "-" + str(t.tm_hour) + \
+                                           "." + str(t.tm_min)  + \
+                                           "." + str(t.tm_sec)
     
     ## The minActions method retuns an array containing the minimal action set
     #  for the loaded game
@@ -84,3 +93,25 @@ class GameEnv:
     #   @return True if the game is in an terminal state, False otherwise
     def gameOver(self):
         return self._ale.game_over()
+      
+    ## The saveFrame method saves the current frame as a PNG file in the given
+    #  folder.
+    #
+    #  @param folder   : Path the the folder where to save the frame
+    #  @param filename : Name of the file to create. If "filename" doesn't end
+    #                    with ".PNG" or ".png", ".png" is appended. If filename
+    #                    is None (default), the created file follow the 
+    #                    following pattern: "creation date of this 
+    #                    object"_frame_"frame number since the begining of 
+    #                    the episode".png
+    def saveFrame(self, folder, filename = None):
+      
+      if filename is None:
+        filename = self._creaTime + "_frame_"                  + \
+                   "{:0>6}".format(self._ale.getEpisodeFrameNumber()) + ".png"
+      
+      r = re.compile("^.*(.png|.PNG)$")
+      if not r.match(filename):
+        filename = filename + ".png"
+        
+      self._ale.saveScreenPNG((folder + os.sep + filename).encode())
