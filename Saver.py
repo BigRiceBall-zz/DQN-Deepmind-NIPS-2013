@@ -210,6 +210,23 @@ class Saver:
                                     networks.id       = ?""",
                           (agentId, networkId)).fetchone()[0]
         return pickle.loads(n)
+      
+    ## The loadNetworkEpoch returns the id of the network linked to the stat
+    #  recorded for the given agent at the given epoch
+    #
+    #   @param agentId : The id of the agent that trained the network
+    #   @param epoch   : The epoch when the stat was recorded
+    #
+    #   @return The id of the network
+    def loadNetworkEpoch(self, agentId, epoch):
+      c     = self._conn.cursor()
+      netId = c.execute("""SELECT id_network
+                           FROM   stats
+                           WHERE  stats.id_agent = ? AND
+                                  stats.epoch    = ?
+                           LIMIT  1""", (agentId, epoch)).fetchone()[0]
+
+      return netId
 
     ## The loadDataset method return the desired dataset
     #
