@@ -240,7 +240,7 @@ class DeepMindAgent(A.Agent):
         return a
 
     ## The loadAgent static method returns an agent build from a previously
-    #  saved agent using the last network saved by this agent
+    #  saved agent
     #
     #   @param message : The message object that the agent uses to communicate
     #                    whith the main thread
@@ -248,13 +248,19 @@ class DeepMindAgent(A.Agent):
     #   @param plotter : The plotter object the agent can use to plot some datas
     #   @param env     : The gameEnvironement the agent will use as input
     #   @param agentId : The id of the agent to copy
+    #   @param loadNet : The id network to load. If negative (default), the last
+    #                    network is loaded. If None, no network is loaded
     #
     #   @return A new agent initilized with the datas previously stored in the
     #           saver object
-    def loadAgent(message, saver, plotter, env, agentId):
+    def loadAgent(message, saver, plotter, env, agentId, loadNet = -1):
         a = DeepMindAgent(message, saver, plotter, env, agentId)
         a.loadParams()
-        a.loadNetwork(None)
+        
+        if not (loadNet is None):
+          if loadNet < 0: loadNet = None
+          a.loadNetwork(loadNet)
+          
         return a 
 
     ## The agent agent constructor. This shouldn't be directly called. Instread,
@@ -542,6 +548,41 @@ class DeepMindAgent(A.Agent):
                         self._params["S"]["score"] * (g / g_1) + (score / g_1)
             self._params["S"]["game"]  = g_1
             
+    ## The replay method makes the agent to replay the given epoch
+    #
+    #  @param epoch : The id of the epoch to replay as it has been recored by
+    #                 the saver
+    #  @param save  : The path of the folder where to save frames or None to
+    #                 disable the recording. Default None
+    #  @return A tuple which the first element is the total score and the second
+    #          one the total reward
+    def replay(self, epoch, save = None):
+      
+      self.loadNetwork(self._saver.loadNetworkEpoch(self.id, epoch))
+      
+      score  = 0
+      reward = 0
+      act    = self._params["N"]["act"]
+      
+      self._newGame(0)
+      while not self._env.gameOver() :
+        a_id   = self._getNextAction(self._input)
+        r_t    = self._performAction(act[a_id])
+        
+        score = score + r_t
+                
+        if r_t > 0 : r_t = self._params["L"]["maxR"]
+        if r_t < 0 : r_t = self._params["L"]["minR"]
+        
+        reward = reward + r_t
+        
+        if not (save is None):
+          self._env.saveFrame(save)
+        
+        self._updateInput()
+      
+      return (score, reward)
+    
     ## The _test method test the current network
     #
     #   TODO : Instead of testing over a fixed number of iteration, the agent
